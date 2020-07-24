@@ -4,3 +4,7 @@ bin/
 WebTools/bin/
 WebTools/dist/conan.js
 WebTools/src/**/*.js
+/.vs/WebTools-Conan
+/packages
+/WebTools/node_modules
+/WebTools/obj/Debug

@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
-import {character} from '../common/character';
-import {HomeLand, HomelandsHelper} from '../helpers/homelands';
-import {Button} from './button';
+import { character } from '../common/character';
+import { HomeLand, HomelandsHelper } from '../helpers/homelands';
+import { Button } from './button';
 
 interface IHomelandSelectionProperties {
     onSelection: (homeland: HomeLand) => void;
@@ -15,14 +15,18 @@ export class HomelandSelection extends React.Component<IHomelandSelectionPropert
 
     render() {
         const homelands = HomelandsHelper.getHomelands().map((h, i) => {
-                return (
-                    <tr key={i}>
-                        <td className="selection-header">{h.name}</td>
-                        <td>{h.talent.name}</td>
-                        <td><Button className="button-small" text="Select" onClick={() => { this.props.onSelection(h.id) }} /></td>
-                    </tr>
-                )
-            })
+            const talent = h.id !== HomeLand.Atlantis
+                ? h.talent.name
+                : "Primitive/Uncivilized";
+
+            return (
+                <tr key={i}>
+                    <td className="selection-header">{h.name}</td>
+                    <td>{talent}</td>
+                    <td><Button className="button-small" text="Select" onClick={() => { this.props.onSelection(h.id) }} /></td>
+                </tr>
+            )
+        })
 
         return (
             <div>
@@ -39,7 +43,7 @@ export class HomelandSelection extends React.Component<IHomelandSelectionPropert
                         {homelands}
                     </tbody>
                 </table>
-                <Button text="Cancel" className="button" onClick={() => this.props.onCancel() }/>
+                <Button text="Cancel" className="button" onClick={() => this.props.onCancel()} />
             </div>
         );
     }
@@ -58,7 +62,7 @@ export class HomelandSelection extends React.Component<IHomelandSelectionPropert
         return (
             <div>
                 <b>{label}</b>
-                
+
             </div>
         );
     }

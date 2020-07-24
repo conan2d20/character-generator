@@ -44,6 +44,21 @@ export enum HomeLand {
     Kordafan,
     Tombalku,
     Xuchotl,
+
+    // Kull
+    Atlantis,
+    IslesOfThePicts,
+    Commoria,
+    Thule,
+    Kamelia,
+    Valusia,
+    Farsun,
+    Verulia,
+    Zarfhaana,
+    Thurania,
+    Grondar,
+    Lemuria,
+    ElderStygia,
 }
 
 class HomelandModel {
@@ -114,6 +129,20 @@ export class Homelands {
         [HomeLand.Kordafan]: new HomelandModel("Kordafan", TalentsHelper.getTalent("Hunter"), ["Kordafani"], 99, Source.Adventurer),
         [HomeLand.Tombalku]: new HomelandModel("Tombalku", TalentsHelper.getTalent("Honest Corruption"), ["Tombalkan"], 99, Source.Adventurer),
         [HomeLand.Xuchotl]: new HomelandModel("Xuchotl", TalentsHelper.getTalent("Strife"), ["Xuchotli"], 99, Source.Adventurer),
+
+        [HomeLand.Atlantis]: new HomelandModel("Atlantis", null, ["Atlantean"], 3, Source.Kull),
+        [HomeLand.IslesOfThePicts]: new HomelandModel("Kaa-u, Isles of the Picts", TalentsHelper.getTalent("Savage Court"), ["Pictish"], 5, Source.Kull),
+        [HomeLand.Commoria]: new HomelandModel("Commoria", TalentsHelper.getTalent("Faded Glory"), ["Commorian"], 8, Source.Kull),
+        [HomeLand.Thule]: new HomelandModel("Thule", TalentsHelper.getTalent("Decadent"), ["Thulian"], 10, Source.Kull),
+        [HomeLand.Kamelia]: new HomelandModel("Kamelia", TalentsHelper.getTalent("Decadent"), ["Kamelian"], 13, Source.Kull),
+        [HomeLand.Valusia]: new HomelandModel("Valusia", TalentsHelper.getTalent("Cosmopolitan"), ["Valusian"], 21, Source.Kull),
+        [HomeLand.Farsun]: new HomelandModel("Farsun", TalentsHelper.getTalent("Resplendent"), ["Old Tongue"], 24, Source.Kull),
+        [HomeLand.Verulia]: new HomelandModel("Verulia", TalentsHelper.getTalent("Treacherous"), ["Verulian"], 27, Source.Kull),
+        [HomeLand.Zarfhaana]: new HomelandModel("Zarfhaana", TalentsHelper.getTalent("Pastoral"), ["Lost Tongue"], 30, Source.Kull),
+        [HomeLand.Thurania]: new HomelandModel("Thurania", TalentsHelper.getTalent("Savage Court"), ["Lost Tongue"], 33, Source.Kull),
+        [HomeLand.Grondar]: new HomelandModel("Grondar", TalentsHelper.getTalent("Of Saddle and Bow"), ["Grond"], 36, Source.Kull),
+        [HomeLand.Lemuria]: new HomelandModel("Lemuria", TalentsHelper.getTalent("Sea Raider"), ["Lemurian"], 38, Source.Kull),
+        [HomeLand.ElderStygia]: new HomelandModel("Elder Stygia", TalentsHelper.getTalent("Desert Born"), ["Lost Tongue"], 40, Source.Kull),
     };
 
     private _regions: { [id: number]: string[] } = {

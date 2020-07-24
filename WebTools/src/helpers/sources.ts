@@ -13,6 +13,7 @@
     King,
     Adventurer,
     Exiles,
+    Kull,
 }
 
 class SourceViewModel {
@@ -41,6 +42,7 @@ export class Sources {
         [Source.King]: "King",
         [Source.Adventurer]: "Adventurer",
         [Source.Exiles]: "Exiles",
+        [Source.Kull]: "Kull"
     };
 
     getSources() {
