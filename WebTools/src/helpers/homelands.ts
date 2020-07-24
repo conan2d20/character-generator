@@ -142,7 +142,7 @@ export class Homelands {
         [HomeLand.Thurania]: new HomelandModel("Thurania", TalentsHelper.getTalent("Savage Court"), ["Lost Tongue"], 33, Source.Kull),
         [HomeLand.Grondar]: new HomelandModel("Grondar", TalentsHelper.getTalent("Of Saddle and Bow"), ["Grond"], 36, Source.Kull),
         [HomeLand.Lemuria]: new HomelandModel("Lemuria", TalentsHelper.getTalent("Sea Raider"), ["Lemurian"], 38, Source.Kull),
-        [HomeLand.ElderStygia]: new HomelandModel("Elder Stygia", TalentsHelper.getTalent("Desert Born"), ["Lost Tongue"], 40, Source.Kull),
+        [HomeLand.ElderStygia]: new HomelandModel("Elder Stygia", TalentsHelper.getTalent("Desert-born"), ["Lost Tongue"], 40, Source.Kull),
     };
 
     private _regions: { [id: number]: string[] } = {
@@ -426,6 +426,56 @@ export class Homelands {
         return homeland;
     }
 
+    generateKullHomeland() {
+        var homeland = HomeLand.Valusia;
+        var d1 = Math.floor(Math.random() * 20) + 1;
+        var d2 = Math.floor(Math.random() * 20) + 1;
+
+        switch (d1 + d2) {
+            case 2: 
+            case 3: homeland = HomeLand.Atlantis; break;
+            case 4: 
+            case 5: homeland = HomeLand.IslesOfThePicts; break;
+            case 6: 
+            case 7:
+            case 8: homeland = HomeLand.Commoria; break;
+            case 9:
+            case 10: homeland = HomeLand.Thule; break;
+            case 11:
+            case 12: 
+            case 13: homeland = HomeLand.Kamelia; break;
+            case 14: 
+            case 15:
+            case 16: 
+            case 17:
+            case 18:
+            case 19: 
+            case 20: 
+            case 21: homeland = HomeLand.Valusia; break;
+            case 22:
+            case 23:
+            case 24: homeland = HomeLand.Farsun; break;
+            case 25:
+            case 26:
+            case 27: homeland = HomeLand.Verulia; break;
+            case 28:
+            case 29:
+            case 30: homeland = HomeLand.Zarfhaana; break;
+            case 31:
+            case 32:
+            case 33: homeland = HomeLand.Thurania; break;
+            case 34:
+            case 35:
+            case 36: homeland = HomeLand.Grondar; break;
+            case 37:
+            case 38: homeland = HomeLand.Lemuria; break;
+            case 39:
+            case 40: homeland = HomeLand.ElderStygia; break;
+        }
+
+        return homeland;
+    }
+
     getRegions(homeland: HomeLand) {
         return this._regions[homeland];
     }
@@ -438,7 +488,9 @@ export class Homelands {
 
     applyHomeland(homeland: HomeLand) {
         var home = this.getHomeland(homeland);
-        character.addTalent(home.talent.name);
+        if (home.talent) {
+            character.addTalent(home.talent.name);
+        }
 
         if (home.languageOptions.length === 1) {
             character.addLanguage(home.languageOptions[0]);

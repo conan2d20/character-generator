@@ -2009,6 +2009,26 @@ export class Talents {
                 "Those with the Hyperliterate talent go beyond the simple literacy of the everyday scribe. They have studied multiple languages equal to their literacy focus and while unable to speak them in any meaningful way can read and write them fluently. Should the character later gain the Polyglot talent, the languages they gain from Hyperliterate add to that talent as well. ",
                 [],
                 1),
+            new TalentModel(
+                "Bureaucrat",
+                "You have moved through the halls of power for so long you have an intuitive grasp of how loyalties lie, flow, and change. Once per play session, you may make an Average (D1) Observation test. For each point of Momentum scored, you know the best means to make an approach to a single character, whether through flattery, bribery, threats, or other means, allowing you to turn one normal success rolled against them into a critical success ",
+                [],
+                1),
+            new TalentModel(
+                "Connected",
+                "The wealth, rank, and name of your family precede you everywhere you go, opening doors closed to most people. With a successful Society check, you can gain access to the best individual to help you with a problem, no matter how busy or important they might be. In your home city, this test is Average (D1). In other lands, it is Challenging (D2). Within hostile territories, it is Daunting (D3). Keep in mind that with power comes enemies. Your gamemaster will use any complications resulting from these tests accordingly.",
+                [],
+                1),
+            new TalentModel(
+                "Sullen Obedience",
+                "Living as a second-class citizen has made you uniquely adept at seeming to follow orders while remaining your own master. Any test made to resist domination, social or magical, is one step of Difficulty lower than normal, to a minimum of Average (D1).",
+                [],
+                1),
+            new TalentModel(
+                "Untamed",
+                "Your robust and wild nature makes even your greatest failures sometimes feel like wild successes. Once per session, when you roll Consequences on a test, you gain an equal amount of Momentum from the roll as well.",
+                [],
+                1),
 
             // Ancient Bloodlines
             new TalentModel(
