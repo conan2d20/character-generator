@@ -91,6 +91,11 @@ export enum Archetype {
     Forgotten,
     Shaper,
     WastelandPriest,
+    // Kull
+    Agent,
+    Ambassador,
+    Counselor,
+    Gladiator,
 }
 
 class ArchetypeModel {
@@ -1299,6 +1304,69 @@ export class Archetypes {
             ],
             99,
             Source.Exiles),
+        [Archetype.Agent]: new ArchetypeModel(
+            "Agent",
+            "Either acting on their own accord, employed privately by nobles, or operating clandestinely at the behest of an organization or court, the agent is primarily focused on changing the status quo or defending change to it, whether negotiating deals whose nature is best kept from public knowledge, recruiting others to accomplish this goal, or even fomenting resentment that leads to rebellion. The agent’s specialty is embedding themselves within the existing social order and seeking out those who might be best used as proxies, keeping the agent’s hands, and reputation, clean.",
+            Skill.Persuade,
+            TalentsHelper.getTalent("Force of Presence"),
+            [Skill.Insight, Skill.Lore, Skill.Observation, Skill.Society],
+            [Skill.Melee, Skill.Stealth, Skill.Thievery],
+            [
+                "One set of appropriate garments for your station",
+                "One set of garments appropriate for another spcial class/caste",
+                EquipmentHelper.getOneHandedWeapons() + "|" + EquipmentHelper.getShields(),
+                "Ring showing true allegiance|Document showing true allegiance|Identifying mark showing true allegiance"
+            ],
+            99,
+            Source.Kull),
+        [Archetype.Ambassador]: new ArchetypeModel(
+            "Ambassador",
+            "An envoy sent from another court, country, or political entity, the ambassador is a highly regarded messenger and representative of their culture to another, straddling both worlds. They are trained to observe and to put on the best possible face for those they stand in for, and to listen and observe carefully to take knowledge back to the one who sent them. They can never judge openly and must be at home in a court as well as a hovel. An ambassador from a wealthy or powerful country will wish for allies from their betters, and a representative from a poor or weaker nation sometimes holds the safety of their home in their hands. ",
+            Skill.Society,
+            TalentsHelper.getTalent("A Modicum of Comfort"),
+            [Skill.Insight, Skill.Linguistics, Skill.Lore, Skill.Persuade],
+            [Skill.Counsel, Skill.Observation, Skill.Survival],
+            [
+                "Fine robes and garments",
+                "Travel garments",
+                "Riding horse|Palanquin",
+                "Writ of passage and credentials"
+            ],
+            99,
+            Source.Kull),
+        [Archetype.Counselor]: new ArchetypeModel(
+            "Counselor",
+            "Advisors to kings, queens, and other nobles, the Counselor is trusted and expected to weigh their decisions with the grander fate of the kingdom in mind, sometimes being the one who must speak hard truths to the one they serve. They are privy to the kingdom’s secrets, and at times know things that not even the monarch is aware of. More than even a spouse, the counselor is the one trusted above all else for guidance by their ruler, and for this reason they are often the target of conspiracies. Some counselors have agendas of their own, serving multiple generations of a ruling family or within the court of one who conquered the prior ruler. In such cases, they may be loyal primarily to the kingdom, or to their own desires. ",
+            Skill.Counsel,
+            TalentsHelper.getTalent("Quiet Wisdom"),
+            [Skill.Command, Skill.Insight, Skill.Lore, Skill.Observation],
+            [Skill.Persuade, Skill.Society, Skill.Siegecraft],
+            [
+                "Fine courtly clothing",
+                "Walking staff",
+                "Royal insignia ring|Royal insignia amulet|Royal insignia badge",
+                "Parchment and writing implements",
+                "Research library",
+                "Apartment within the palace"
+            ],
+            99,
+            Source.Kull),
+        [Archetype.Gladiator]: new ArchetypeModel(
+            "Gladiator",
+            "Whether an outland barbarian, a slave of exceptional skill, a criminal sent to the arena as punishment, or a captured soldier in an enemy army, the gladiator knows only captivity and combat. Training daily, the gladiator learns how to fight, and how to kill. Though all are kin within the pits, on the blood-soaked floor of the arena each stands alone. Simultaneously a skilled professional and mere token to be gambled away, the gladiator seeks success, as well as attention from the audience, in hopes of being granted liberty. Once set free, the gladiator must learn how to live. ",
+            Skill.Melee,
+            TalentsHelper.getTalent("No Mercy"),
+            [Skill.Acrobatics, Skill.Athletics, Skill.Parry, Skill.Resistance],
+            [Skill.Linguistics, Skill.Observation, Skill.Siegecraft],
+            [
+                "Commoner's garments",
+                EquipmentHelper.getWeaponsNotOfType(WeaponType.Missile) + "|" + EquipmentHelper.getShields(),
+                "Token of life before the arena",
+                "Certificate of release",
+                "2 impressive scars|3 impressive scars"
+            ],
+            99,
+            Source.Kull),
         //[Archetype.]: new ArchetypeModel(
         //    "",
         //    "",
@@ -1513,6 +1581,12 @@ export class Archetypes {
         }
         else if (archetype === Archetype.Noble) {
             character.socialStanding = 2;
+        }
+        else if (archetype === Archetype.Ambassador) {
+            const worth = DiceRoller.rollSpecial(12, 0).hits;
+            if (worth > 0) {
+                character.addEquipment(`${worth} Gold in gifts suitable for a monarch`);
+            }
         }
     }
 }
