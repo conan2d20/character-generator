@@ -88,6 +88,11 @@ export enum Education {
     ADemonsBargain,
     WisdomOfTheStars,
     TheWildForge,
+    // Kull
+    Dynastic,
+    Eldritch,
+    Hostage,
+    Rustic,
 }
 
 class EducationModel {
@@ -810,6 +815,46 @@ export class Educations {
             [],
             1220,
             Source.Adventurer),
+        [Education.Dynastic]: new EducationModel(
+            "Dynastic",
+            "For a dozen generations and more, your family has filled one role in society. You are farmers, or drovers, or alchemists, or courtiers, or warriors, or one of a thousand other roles filled in the cities and kingdoms of the age. You gained a focused education from some of the best in the world, the better to prepare you for your career in the same tradition.",
+            [Skill.Insight, Skill.Lore, Skill.Career],
+            [Skill.Discipline, Skill.Linguistics, Skill.Society],
+            [
+                "A set of tools of your particular trade"
+            ],
+            99,
+            Source.Kull),
+        [Education.Eldritch]: new EducationModel(
+            "Eldritch",
+            "You were raised in an ancient cult, or by adherents to that cult. Though they successfully passed as normal members of your culture, your education included dark secrets and hideous spells. Even if you have since put that life behind you, the knowledge still whispers in your mind in the dark of night.",
+            [Skill.Discipline, Skill.Lore, Skill.Sorcery],
+            [Skill.Alchemy, Skill.Craft, Skill.Thievery],
+            [
+                "An ancient scroll in a script you cannot read|An ancient tome in a script you cannot read"
+            ],
+            99,
+            Source.Kull),
+        [Education.Hostage]: new EducationModel(
+            "Hostage",
+            "You were raised as the ‘guest’ of a house or kingdom hostile to your own people. You were treated with every hospitality and given the same training and tutelage as the other youths in the house. Still, the threat of death and the stink of enmity saturated your experience, turning you canny and suspicious where your siblings were open and warm. ",
+            [Skill.Discipline, Skill.Lore, Skill.Society],
+            [Skill.Linguistics, Skill.Persuade, Skill.Thievery],
+            [
+                "A family heirloom you kept in secret"
+            ],
+            99,
+            Source.Kull),
+        [Education.Rustic]: new EducationModel(
+            "Rustic",
+            "You grew up in the wilder spaces and never received formal tutelage or initiation into the refined learnings of civilized folk. Your training was in the ways of the wild, of earth and sky, of predator and prey. When you entered civilized lands, people tried to teach you their ways. Some were even successful. ",
+            [Skill.Animal_Handling, Skill.Lore, Skill.Survival],
+            [Skill.Counsel, Skill.Discipline, Skill.Society],
+            [
+                "A small trophy from a kill you made in your wilder days"
+            ],
+            99,
+            Source.Kull),
         //[Education.]: new EducationModel(
         //    "",
         //    "",
