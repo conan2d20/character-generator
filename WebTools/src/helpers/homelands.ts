@@ -189,6 +189,19 @@ export class Homelands {
         [HomeLand.BlackCoast]: ["Adebayo", "Adedji", "Adeoye", "Amaku", "Amente", "Ayele", "Bengu", "Bunda", "Enanga", "Endale", "Kagale", "Kahero", "Kamara", "Kenyatta", "K'Gari", "Makara", "Mganga", "Mubale", "Mwando", "Nastasen", "N'Komo", "Okang", "Okunnu", "Shanaka", "Talharqa", "Adagala", "Adebayo", "Adedji", "Adeoye", "Amaku", "Amente", "Ayele", "Bengu", "Bunda", "Enanga", "Endale", "Kagale", "Kahero", "Kamara", "Karanja", "Kashta", "Kassaye", "Kenyatta", "K'Gari", "Khama", "Makara", "Matano", "Mayanja", "Mganga", "Morake", "Mshila", "Mubale", "Mwando", "Mwangi", "Nastasen", "N'Komo", "Okang", "Okondo", "Okunnu", "Shanaka", "Talharqa", "Zenyami"],
         [HomeLand.Ghulistan]: ["Aarash", "Aazar", "Badeed", "Farjaad", "Gulrez", "Isaad", "Jaah", "Lodhi", "Mirwais", "Shahmeer", "Yar"],
         [HomeLand.Kosala]: ["Ahen", "Azarah", "Bota", "Canto", "Fendi", "Hanud", "Qalandar", "Rabaani", "Wase", "Zabdas"],
+        [HomeLand.Atlantis]: ["Acco", "Ah-Lun", "Baroc", "Co-Nal", "Gar", "Gram", "Kellan", "Maddan", "Nemmed", "Relkor", "Tor-Na", "Zheath"],
+        [HomeLand.Lemuria]: ["Alatas", "Chodak", "Dorgon", "Harukor", "Heshen", "Kennan", "Koldo", "Korul", "Seriath", "Vertai"],
+        [HomeLand.IslesOfThePicts]: ["Adar", "Crall", "Colla", "Duac", "Ellar", "Gir-ik", "Ka-noc", "Ra-nu", "Tor-nu", "Urag"],
+        [HomeLand.Grondar]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.ElderStygia]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.Thurania]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.Zarfhaana]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.Commoria]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Farsun]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Kamelia]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Thule]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Valusia]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Verulia]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
     };
 
     private _femaleNames: { [id: number]: string[] } = {
@@ -230,6 +243,19 @@ export class Homelands {
         [HomeLand.BlackCoast]: ["Aluna", "Asminia", "Ayana", "Behare", "Chanya", "Dalila", "Erza", "Hamere", "Iras", "Kanika", "Katura", "Kenyetta", "Maiba", "Massassi", "Micere", "Mirembe", "Nagesa", "Nehanda", "Nmambi", "Ntara", "Ntuli", "Nyanath", "Qalhata", "Saba", "Sala", "Sudati", "Zensele", "Aluna", "Asminia", "Ayana", "Behare", "Chanya", "Dalila", "Erza", "Ghida", "Ghnima", "Hamere", "Hasna", "Hassiba", "Iras", "Kanika", "Karimala", "Katura", "Kenyetta", "Maiba", "Massassi", "Micere", "Mirembe", "Nagesa", "Najet", "Nehanda", "Nezha", "Nmambi", "Ntara", "Ntuli", "Nyanath", "Qalhata", "Saba", "Sala", "Sudati", "Tafat", "Tanest", "Tiziri", "Wrina", "Zensele", "Zergha"],
         [HomeLand.Ghulistan]: ["Abrisham", "Afri", "Benesh", "Damsa", "Gulnoor", "Kaamsiha", "Moska", "Nageenga", "Permaz", "Shadleen", "Yasmoon"],
         [HomeLand.Kosala]: ["Ahna", "Bailya", "Llao", "Losana", "Maesa", "Samsi", "Tanit", "Tuvé", "Wutu", "Zainab"],
+        [HomeLand.Atlantis]: ["Ai-La", "Bros-Na", "En-Gi", "Huna", "Kea", "Lia", "Locha", "Maer", "Nes-Ta", "Sinna", "Thola", "Unna"],
+        [HomeLand.Lemuria]: ["Deki", "Duma", "Kanti", "Methia", "Namhla", "Nyima", "Pala", "Raden", "Rasuna", "Takla"],
+        [HomeLand.IslesOfThePicts]: ["Ail-sa", "Begis", "Dola-na", "Dua-na", "Eriu", "Euna", "Gelis", "Mo-ra", "Os-la", "Rao-na"],
+        [HomeLand.Grondar]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.ElderStygia]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.Thurania]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.Zarfhaana]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.Commoria]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Farsun]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Kamelia]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Thule]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Valusia]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Verulia]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
     };
 
     getHomelands() {
