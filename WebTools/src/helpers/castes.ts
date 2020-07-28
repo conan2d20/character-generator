@@ -54,6 +54,12 @@ export enum Caste {
     Exile,
     Griot,
     Tribesperson,
+    // Kull
+    Aristocrat,
+    Conquered,
+    Courtier,
+    Feral,
+    Savage,
 }
 
 class CasteModel {
@@ -432,6 +438,46 @@ export class Castes {
             1,
             99,
             Source.Adventurer),
+        [Caste.Aristocrat]: new CasteModel(
+            "Aristocrat",
+            "You are the product of extremely old money, a scion or daughter of a family who secured wealth and station a dozen generations or more ago. Privilege and power are your birthright, and opportunity opens for you wherever you choose to spend your time. The weight of tradition alone holds your place, though your actions might cement it further.",
+            [TalentsHelper.getTalent("Connected"), TalentsHelper.getTalent("Sheltered")],
+            Skill.Society,
+            2,
+            99,
+            Source.Kull),
+        [Caste.Conquered]: new CasteModel(
+            "Conquered",
+            "Your people were once proud and free but were conquered generations ago by a powerful nation. They now live as second-class citizens, slaves or servants, in the cities and farmlands they used to rule. The higher classes treat you with disdain, but you hold a deep connection to others of your tribe, based on shared duress and memories of a better time.",
+            [TalentsHelper.getTalent("Embittered"), TalentsHelper.getTalent("Sullen Obedience")],
+            Skill.Observation,
+            0,
+            99,
+            Source.Kull),
+        [Caste.Courtier]: new CasteModel(
+            "Courtier",
+            "From birth or even before, all knew you would spend your life in the halls of power like your parents, and their parents before them. Whether your assignment is as a clerk, tax collector, steward, military advisor, or close confidant of a ruler, you are adept at navigating the complex and perilous byways of speaking truth and lies to power in appropriate balance.",
+            [TalentsHelper.getTalent("Bureaucrat"), TalentsHelper.getTalent("Subject")],
+            Skill.Lore,
+            1,
+            99,
+            Source.Kull),
+        [Caste.Feral]: new CasteModel(
+            "Feral",
+            "Raised in the wilderness by animals, you encountered human civilization only later in life. Their ways still confuse and sometimes horrify you. The same can be said of how others view your own ways, as you remind them of the wild from which their entire society was built to shield them. ",
+            [TalentsHelper.getTalent("Survivor"), TalentsHelper.getTalent("Vagabond")],
+            Skill.Animal_Handling,
+            0,
+            99,
+            Source.Kull),
+        [Caste.Savage]: new CasteModel(
+            "Savage",
+            "You spent your youth in barbaric lands, living among peoples unaccustomed to the niceties and luxuries of civilized society. Although you can now move among them with comfort, and even some respect, you are keenly aware of the differences between their minds and yours. Sometimes this is confusing. Other times, it results in sudden insights you can turn to your advantage.",
+            [TalentsHelper.getTalent("Sentry"), TalentsHelper.getTalent("Untamed")],
+            Skill.Observation,
+            0,
+            99,
+            Source.Kull),
     };
 
     getCastes() {

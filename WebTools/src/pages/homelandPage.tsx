@@ -45,6 +45,10 @@ export class HomelandPage extends React.Component<IPageProperties, IHomelandPage
             ? <Button className="button" text="Roll Southern Homeland" onClick={() => this.rollSouthernHomeland()} />
             : undefined;
 
+        const kullHomelands = character.hasSource(Source.Kull)
+            ? <Button className="button" text="Roll Thurian Homeland" onClick={() => this.rollKullHomeland()} />
+            : undefined;
+
         const content = !this.state.showSelection ?
             (
                 <div>
@@ -60,6 +64,7 @@ export class HomelandPage extends React.Component<IPageProperties, IHomelandPage
                         {scoutHomelands}
                         {easternHomelands}
                         {southernHomelands}
+                        {kullHomelands}
                         <Button className="button" text="Select Homeland" onClick={() => this.showHomelands() } />
                     </div>
                 </div>
@@ -106,6 +111,11 @@ export class HomelandPage extends React.Component<IPageProperties, IHomelandPage
 
     private rollSouthernHomeland() {
         var homeland = HomelandsHelper.generateSouthernHomeland();
+        this.selectHomeland(homeland);
+    }
+
+    private rollKullHomeland() {
+        var homeland = HomelandsHelper.generateKullHomeland();
         this.selectHomeland(homeland);
     }
 

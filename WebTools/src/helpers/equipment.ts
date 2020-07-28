@@ -243,7 +243,22 @@ export class Equipment {
             {
                 head: 4, arms: 4, torso: 4, legs: 4, armorType: ArmorType.HeavyArmor,
                 qualities: []
-            })
+            }),
+        new Item("Light battle harness (Armor 2: Torso; Armor: 1 Limbs)", "Light battle harness", ItemType.Armor,
+            {
+                head: 0, arms: 1, torso: 2, legs: 1, armorType: ArmorType.LightArmor,
+                qualities: ["Fragile"]
+            }),
+        new Item("Heavy battle harness (Armor 2: Torso/Limbs)", "Heavy battle harness", ItemType.Armor,
+            {
+                head: 0, arms: 2, torso: 2, legs: 2, armorType: ArmorType.LightArmor,
+                qualities: ["Fragile"]
+            }),
+        new Item("Sea Leather (Armor 2: Torso/Limbs)", "Sea Leather", ItemType.Armor,
+            {
+                head: 0, arms: 2, torso: 2, legs: 2, armorType: ArmorType.LightArmor,
+                qualities: []
+            }),
     ];
 
     private _weapons: Item[] = [
@@ -1039,6 +1054,14 @@ export class Equipment {
                 size: WeaponSize.OneHanded,
                 damage: 4
             }),
+        new Item("Valusian Longsword", "Valusian Longsword", ItemType.Weapon,
+            {
+                weaponType: WeaponType.Sword,
+                qualities: ["Parrying", "Piercing 1"],
+                range: "",
+                size: WeaponSize.OneHanded,
+                damage: 4
+            })
     ];
 
     private _shields: Item[] = [
@@ -1084,6 +1107,13 @@ export class Equipment {
                 size: WeaponSize.OneHanded,
                 damage: 3
             }),
+        new Item("Great Shield", "Great Shield", ItemType.Shield,
+            {
+                qualities: ["Knock", "Non-L", "Shield 5"],
+                range: "",
+                size: WeaponSize.TwoHanded,
+                damage: 2
+            })
     ];
 
     private _kits: { [skill: number]: string } = {

@@ -45,6 +45,7 @@ export class WarStoryPage extends React.Component<IPageProperties, IWarStoryPage
             [Source.Wanderer]: "What significant event did you experience during your life in the east?",
             [Source.King]: "Noble characters has a Court Story, some exploit within their household or that of their kingdom’s court, whether tragic or beneficial, that set them upon the path to adventure.",
             [Source.Adventurer]: "Just as in the north, the south is wracked by war, both at the tribal and the kingdom level. Everyone, no matter how remotely placed or their status, is affected by the ceaseless tide of human conflict, and thus all of those from the lands south of the Styx have war stories, experiences that set them upon the path of adventure. ",
+            [Source.Kull]: "War, like all human endeavors, is eternal, and the Thurian Age is no different, its squabbles and frays echoing throughout the centuries to come."
         };
     }
 
@@ -170,6 +171,16 @@ export class WarStoryPage extends React.Component<IPageProperties, IWarStoryPage
                 )
                 : undefined;
 
+            const kull = character.hasSource(Source.Kull)
+                ? (
+                    <div>
+                        <br />
+                        <div className="header-small">Kull</div>
+                        <Button className="button" text="War Story" onClick={() => this.showSection(Source.Kull)} />
+                    </div>
+                )
+                : undefined;
+
             return (
                 <div className="page">
                     <div className="page-text">
@@ -192,6 +203,7 @@ export class WarStoryPage extends React.Component<IPageProperties, IWarStoryPage
                     {wanderer}
                     {king}
                     {adventurer}
+                    {kull}
                 </div>
             );
         }

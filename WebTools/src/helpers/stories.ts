@@ -1285,6 +1285,166 @@ export class Stories {
                 "Wiser",
                 20),
         ],
+        [Caste.Aristocrat]: [
+            new StoryModel(
+                "Abandoned a Coup",
+                "During your childhood, your family supported an attempted coup against the legitimate and still-sitting rulers. As the coup fell apart, your elders managed to distance themselves enough to not get caught up in the reprisals. Almost everybody who knew about your involvement is many years dead...almost. Who keeps the secret that could destroy your family?",
+                "Dark Secret",
+                3),
+            new StoryModel(
+                "Bastard Child",
+                "You are the child of only one of your two parents, raised as their own out of love for you, or for your other parent. Though your family cared for you materially, you could feel the guilt of your parent, the rage of their spouse, and the deeper rivalry with your siblings. As an adult, how much do you claim your connection to the family? Are you in touch with your other kin?",
+                "Brittle Pride",
+                6),
+            new StoryModel(
+                "Falling Stock",
+                "When your parents were young, your house was among the most favored in your kingdom, enjoying the largesse and the ear of your ruler at a moment’s notice. Recently, though, you have fallen out of favor...and continue to plummet. What caused this fall from grace? Were you responsible?",
+                "Doors Open Once",
+                10),
+            new StoryModel(
+                "Political Marriage",
+                "Somewhere in this kingdom or another, your spouse lives comfortably on your family wealth. This loveless marriage was arranged before either of you reached 10 years of age and has cemented an alliance between two rival houses. Though it has little impact on your daily life, it prevents any kind of legitimate romance. When was the last time you saw your spouse? Are you in love with anybody else? ",
+                "Lovelorn",
+                14),
+            new StoryModel(
+                "Remote Appointment",
+                "During your childhood, your parents were sent to live on an estate in a distant kingdom as ambassadors between the two realms. You loved your time there and enjoyed equally the cache your cosmopolitan experience brought you during your teen years at home. What friends and fondnesses still remain after your time abroad?",
+                "Far-flung Friends",
+                17),
+            new StoryModel(
+                "Rising Star",
+                "Though your family has been a major house for generations, only recently has it begun to rise into the highest echelons of society. Some older clans resent your “upstart” presence, but more flock to you, recognizing new opportunities. How has this change of circumstances impacted you personally?",
+                "Long Memory",
+                20),
+        ],
+        [Caste.Conquered]: [
+            new StoryModel(
+                "Beaten Severely",
+                "When a group of soldiers, bravos, or ruffians found out Syour heritage, they beat you within an inch of your life. You recovered, physically at least, and your status meant no legal repercussions for those who beat you. You did, ultimately, gain a modicum of vengeance. What did you do? Who close to you was hurt in the process?",
+                "Vengeful",
+                3),
+            new StoryModel(
+                "Ghetto Denizen",
+                "You grew up in a packed, filthy, crumbling, crime-ridden district of your city, where your people were forced to dwell. Some among you took daily forays for work into the splendors of the outer city but returned every night. Life demanded hard choices, and you made them. Who did you have to hurt to get out?",
+                "Trusted or Traitor",
+                6),
+            new StoryModel(
+                "Sent into Exile",
+                "To make room for some project or migration, your entire people were sent from their homeland to eke out a hardscrabble existence in some forsaken corner of empire. Life there was severe, and many died who would have lived had you been allowed to stay. What part of your original homeland still stirs you to anger, or despair?",
+                "Lost Your Legacy",
+                10),
+            new StoryModel(
+                "Slid into Addiction",
+                "It might have been drink, gambling, or the pleasures of the flesh, or the sweet oblivion of lotus and other drugs, but some distraction from the squalor of life claimed you, body and soul, for some years. You are largely recovered now, but still sometimes feel its siren call. To what were you addicted? What happened at your lowest point? How did you get clean?",
+                "Addicted",
+                14),
+            new StoryModel(
+                "Starved in Lean Times",
+                "When crop blights and war cut food supplies, your people were the first to suffer even as the more fortunate feasted unto gorging. As the weeks of hunger turned to months, starvation took the weak and desperation marred even the purest. What filth did you eat, and what atrocities did you commit, to fill your belly?",
+                "Cannibal",
+                17),
+            new StoryModel(
+                "Survived a Pogrom",
+                "Forces from the occupying peoples came to slaughter your entire village. Your parents and siblings all died in the attack, but you managed to escape with your life, a handful of food, and one or two trinkets. What did you have to do to live through that day?",
+                "Orphaned Young",
+                20),
+        ],
+        [Caste.Courtier]: [
+            new StoryModel(
+                "Averted a Scandal",
+                "Through luck or design, in your youth you were able to prevent a potential scandal. You took that opportunity, earning the thanks of a powerful individual, family, or group. It also earned you the enmity of those who stood to profit had the scandal occurred. Who is in your debt? Who still resents your intrusion?",
+                "Owes a Debt",
+                3),
+            new StoryModel(
+                "Forbidden Love",
+                "You fell in love, or at least in lust, with somebody forbidden by class, or ethnicity, or to one already betrothed. The relationship is long over, or was never permitted to blossom, but one never forgets one’s first. Whom did you love? How did it end?",
+                "Lovelorn",
+                6),
+            new StoryModel(
+                "Grand Tour",
+                "You accompanied a royal scion about your age on a year-long tour of neighboring lands, where you met courtiers, greeted royals, and debauched in many languages. Your travels and experiences built the beginnings of a back-channel network you’ve groomed since then, as has the handful of illicit favors you did for the upper class at opportune moments. What was the most memorable adventure of that journey?",
+                "Well-travelled",
+                10),
+            new StoryModel(
+                "Moment of Fame",
+                "For a shining few weeks, you were a favorite of your ruler, owing to brilliant service, excellent work, or personal favor. During that time, you enjoyed wealth and renown you never had before...and have not since. What was responsible for your time in the sun?",
+                "Regrets",
+                14),
+            new StoryModel(
+                "Tutored by a Noble",
+                "Whether as punishment or practice, a minor lord’s child was tasked with teaching you some points of your craft. This relationship blossomed into a heartfelt friendship, despite the gap in your relative social standing. How do you both honor that bond as adults?",
+                "Patronage or Nemesis",
+                17),
+            new StoryModel(
+                "Witnessed Atrocity",
+                "Power is held by ruthlessly crushing those who dare dream of taking it away. In your early years, you stood by as your ruler made an example of an enemy. The horror of those hours haunts you to this day. What did you witness? ",
+                "Scarred by Horror",
+                20),
+        ],
+        [Caste.Feral]: [
+            new StoryModel(
+                "Defeated a Great Beast",
+                "In your youth, a great hunter stalked your region of the wild. It might have been a particularly ferocious bear or cat, a monstrosity left over from forgotten times, or even a supernatural horror summoned and escaped. Despite being smaller and weaker, you outwitted your foe and emerged victorious. What did you kill and how did you trick it? What scars do you wear with obvious pride?",
+                "Proud",
+                3),
+            new StoryModel(
+                "Forest Fire",
+                "Though they are part of the natural order of the world, there is nothing natural seeming about a wildfire to those animals caught in it. When flame took your home and sent your friends fleeing, you ran alongside them. No matter what happened to you afterward, fire remained your most terrible and ruinous enemy and you live with a healthy respect for its power. What did you witness as walls of flame surrounded you?",
+                "Pyrophobic",
+                6),
+            new StoryModel(
+                "Hunted by Man",
+                "Hunters from a nearby village discovered your existence when you were still small, and you became a target for their sport. As you grew, your legend changed. What was once a coveted quarry became a respected opponent, and finally a feared ravager to those willing to brave your territory. What was the closest they ever came to defeating you? How did you survive?",
+                "Vengeance",
+                10),
+            new StoryModel(
+                "Mighty Patron",
+                "A great beast in your part of the wild took you in, either when you first became one with the forest or some time thereafter. Their protection and patronage was the central fact of your upbringing, giving you pride and something to measure yourself against. It also made you a target when you weren’t in the shadow of your powerful friend. Your protector and parent is long dead now, but you do not forget their teachings. What manner of creature was it? How do you honor their memory today?",
+                "Valorous",
+                14),
+            new StoryModel(
+                "One of the Pack",
+                "From your earliest memories, you ran with a group of wolves, deer, or other pack animals who raised you as their own. This upbringing was less lonely than it might have been, but as you became more aware of your own form and mind, the differences between you and your brothers and sisters wore hard on you. Eventually you left the pack to make your way as a human being. What were your first impressions of civilization?",
+                "Animal Lover",
+                17),
+            new StoryModel(
+                "Shadow of Civilization",
+                "The wild places of the world are dotted with the remains of cities and temples long forgotten, generations before the foundations of existing metropolises were lain. You grew up among the vines and creepers of such a place, sleeping in ancient bowers and exploring the secret places of peoples whose very ghosts are ancient. What was the uncanniest thing you discovered in your ramblings? What token of them do you carry with you?",
+                "Ancient Secrets",
+                20),
+        ],
+        [Caste.Savage]: [
+            new StoryModel(
+                "Cast Out",
+                "Not long after you reached an age to be responsible for your own deeds, you were accused of an act so heinous death was the traditional sentence. Due to your youth, some friends of your family moved the elders to sentence you instead to exile. You left your home with a week’s worth of food, the clothes on your back, and a single weapon. What act were you accused of? Were you actually guilty?",
+                "Cast Aside",
+                3),
+            new StoryModel(
+                "Displaced",
+                "Whether from natural catastrophe, changes in herds or forage, invasion, or some other factor, your people were forced to leave their homeland and eke out their existence in unfamiliar territories. You witnessed the fear, deprivation, and changes firsthand. This might have been responsible for your striking out on your own, or you may have chosen not to leave with them in the first place. What moved your people from their ancestral range? How did it affect you personally?",
+                "Vengeful",
+                6),
+            new StoryModel(
+                "Participated in Raids",
+                "Your people derived some of their sustenance from raiding the softer, more civilized farms and settlements at the edges of your range. You participated in such raids, killing and looting as enthusiastically as your kinsfolk. The lust for adventure and bloodshed never left you, though you are long separated from that life. What was the greatest raid you ever joined?",
+                "Adventurous",
+                10),
+            new StoryModel(
+                "Taken by Outsiders",
+                "Raiders from other lands set upon your people and took some of you with them. This might have been a slave raid, an attempt to horrify and subdue your people, or even a well-intended attempt to civilize the children of an uncivilized clan. Whatever the reason, what came next was a swift education in brutality and assimilation. You never forgot your homeland, nor forgave those who took you. How did you survive your first year? What depths did you sink to?",
+                "Divided Family",
+                14),
+            new StoryModel(
+                "Wrath of Nature",
+                "You survived a natural catastrophe of one kind or another: an earthquake, tornado, drought, flood, tidal wave, volcanic eruption, or similar event. Its impact on your people was profound, and not just in the immediate waves of death and destruction. It changed the land you lived on for decades, forcing your people to change along with it. How did your people change? Did you welcome or lead the shifts, or was it part of what drove you away?",
+                "Survivor",
+                17),
+            new StoryModel(
+                "Young Shaman",
+                "As a small child, your tribe’s shaman identified you as touched by the spirits of your region. You were elevated to shamanic status and spent years schooled in the ways of your animistic religion. You learned to read the will of great spirits in the motions of the wind, and the changing of the seasons, and how to read omens in the spoor of dead animals found on game trails. When you left the tribe, did you take the traditions with you? Or did you spurn your smaller gods just as you spurned the people of your birth?",
+                "Pious",
+                20),
+        ],
         //[Caste.]: [
         //    new StoryModel(
         //        "",

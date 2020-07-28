@@ -1807,6 +1807,36 @@ export class Talents {
                 "Born in a place of deep winter and intense cold, often spanning the entire year, you are accustomed to frigid climes. When in wintry environments, the number of successes required for any Survival test you attempt is reduced by 1. This can even reduce tests to a Difficulty of Simple (D0). However, you must achieve 1 additional level of success when attempting Survival tests in areas offering the Desert-born talent.",
                 [],
                 1),
+            new TalentModel(
+                "Decadent",
+                "Your homeland may not be as ancient as others in this age, but its wealth and resources have enabled its citizens to thrive for so long that their interests become focused on pleasure and aesthetics more than sustenance. They have not known hardship in decades, and debauchery is commonplace. When in your homeland, your Upkeep costs are increased by 2CD, but for every effect rolled you automatically recover 1 additional Wound or Trauma (your choice), free of charge, up to your total.",
+                [],
+                1),
+            new TalentModel(
+                "Faded Glory",
+                "Millennia of affluence, corruption, and ennui in your homeland has bred an entire civilization inured to the pleasures of the flesh and mind. No debauchery is too much for the people of your land, nor is any excess new or shocking. When you make a test to resist, enjoy, or employ some form of decadence, you can voluntarily fail the test but do not pay 1 Doom to the gamemaster.",
+                [],
+                1),
+            new TalentModel(
+                "Pastoral",
+                "Decades or centuries of relative peace have left the people of your homeland optimistic and full of joy, even when faced with deep adversity. Once per play session, you may think back on happier times and take a Recover Action as a Minor Action, restoring Resolve only.",
+                [],
+                1),
+            new TalentModel(
+                "Primitive",
+                "Though the Seven Empires are ancient, your homeland is remote and slow to rise. Many of the touchstones of civilization — architecture, society, religion, craftsmanship — are woefully behind those of its rivals. Your connection to the wild is more profound, however. You may reduce the Difficulty of an Animal Handling or Survival test by one step by paying 1 Doom.",
+                [],
+                1),
+            new TalentModel(
+                "Resplendent",
+                "Your home kingdom is akin to a strutting peacock, its arts and culture so refined and ostentatious that you stand apart from other lands. The quality of craftsmanship, clothing, and architecture in your homeland stands head-and-shoulders above those of others. Any equipment you begin with is worth an additional +1 Gold per item, and you may add an additional +1d20 when performing any Craft test.",
+                [],
+                1),
+            new TalentModel(
+                "Treacherous",
+                "Your homeland, and its folk, are unfortunately known throughout the Seven Empires for their unreliability and dishonesty, and adages are common identifying you — perhaps unfairly — as being untrustworthy. Persuasion attempts against those from other homelands are increased by one step of Difficulty, but any successful Persuasion test results in 1 free point of Momentum. If the test is made over an issue of money, you receive an additional +1 Gold instead of this Momentum.",
+                [],
+                1),
 
             // Caste Talents
             new TalentModel(
@@ -1977,6 +2007,26 @@ export class Talents {
             new TalentModel(
                 "Hyperliterate",
                 "Those with the Hyperliterate talent go beyond the simple literacy of the everyday scribe. They have studied multiple languages equal to their literacy focus and while unable to speak them in any meaningful way can read and write them fluently. Should the character later gain the Polyglot talent, the languages they gain from Hyperliterate add to that talent as well. ",
+                [],
+                1),
+            new TalentModel(
+                "Bureaucrat",
+                "You have moved through the halls of power for so long you have an intuitive grasp of how loyalties lie, flow, and change. Once per play session, you may make an Average (D1) Observation test. For each point of Momentum scored, you know the best means to make an approach to a single character, whether through flattery, bribery, threats, or other means, allowing you to turn one normal success rolled against them into a critical success ",
+                [],
+                1),
+            new TalentModel(
+                "Connected",
+                "The wealth, rank, and name of your family precede you everywhere you go, opening doors closed to most people. With a successful Society check, you can gain access to the best individual to help you with a problem, no matter how busy or important they might be. In your home city, this test is Average (D1). In other lands, it is Challenging (D2). Within hostile territories, it is Daunting (D3). Keep in mind that with power comes enemies. Your gamemaster will use any complications resulting from these tests accordingly.",
+                [],
+                1),
+            new TalentModel(
+                "Sullen Obedience",
+                "Living as a second-class citizen has made you uniquely adept at seeming to follow orders while remaining your own master. Any test made to resist domination, social or magical, is one step of Difficulty lower than normal, to a minimum of Average (D1).",
+                [],
+                1),
+            new TalentModel(
+                "Untamed",
+                "Your robust and wild nature makes even your greatest failures sometimes feel like wild successes. Once per session, when you roll Consequences on a test, you gain an equal amount of Momentum from the roll as well.",
                 [],
                 1),
 
