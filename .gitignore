@@ -7,4 +7,10 @@ WebTools/src/**/*.js
 /.vs/WebTools-Conan
 /packages
 /WebTools/node_modules
+/WebTools/obj/Debug
+/WebTools/obj/Release
+WebTools/src/**/*.js
+/.vs/WebTools-Conan
+/packages
+/WebTools/node_modules
 /WebTools/obj

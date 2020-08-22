@@ -107,6 +107,7 @@ export class TalentsOverviewPage extends React.Component<{}, {}> {
     private loadTalents() {
         for (var c = 0; c < this._categories.length; c++) {
             const category = this._categories[c];
+            console.log(category);
             if (category === "Castes") {
                 const castes = CastesHelper.getCastes();
                 for (var i = 0; i < castes.length; i++) {
@@ -123,10 +124,22 @@ export class TalentsOverviewPage extends React.Component<{}, {}> {
                 const homelands = HomelandsHelper.getHomelands();
                 for (var i = 0; i < homelands.length; i++) {
                     let homeland = homelands[i];
-                    const talent = TalentsHelper.getTalent(homeland.talent.name);
-                    if (!this.hasTalent(this._talents[category], talent.name)) {
-                        this._talents[category].push(new TalentViewModel(talent.name, talent.description, this.getSource(talent.name), this.prerequisitesToString(talent.prerequisites)));
+                    if (homeland.talent) {
+                        const talent = TalentsHelper.getTalent(homeland.talent.name);
+                        if (!this.hasTalent(this._talents[category], talent.name)) {
+                            this._talents[category].push(new TalentViewModel(talent.name, talent.description, this.getSource(talent.name), this.prerequisitesToString(talent.prerequisites)));
+                        }
                     }
+                }
+
+                if (!this.hasTalent(this._talents[category], "Primitive")) {
+                    const tal = TalentsHelper.getTalent("Primitive");
+                    this._talents[category].push(new TalentViewModel(tal.name, tal.description, this.getSource(tal.name), this.prerequisitesToString(tal.prerequisites)));
+                }
+
+                if (!this.hasTalent(this._talents[category], "Uncivilized")) {
+                    const tal = TalentsHelper.getTalent("Uncivilized");
+                    this._talents[category].push(new TalentViewModel(tal.name, tal.description, this.getSource(tal.name), this.prerequisitesToString(tal.prerequisites)));
                 }
             }
             else if (category === "Ancient Bloodlines") {

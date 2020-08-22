@@ -8,10 +8,13 @@ import {PageHeader} from '../components/pageHeader';
 import {Button} from '../components/button';
 import {DropDownInput} from '../components/dropDownInput';
 import {TalentDescription} from '../components/talentDescription';
+import { TalentList } from '../components/talentList';
+import { TalentSelection } from '../components/talentSelection';
 
 export class HomelandDetailsPage extends React.Component<IPageProperties, {}> {
     private _selectedLanguage: string;
     private _selectedRegion: string;
+    private _selectedTalent: string;
 
     constructor(props: IPageProperties) {
         super(props);
@@ -57,13 +60,17 @@ export class HomelandDetailsPage extends React.Component<IPageProperties, {}> {
               )
             : undefined;
 
+        const talent = character.homeland !== HomeLand.Atlantis
+            ? <TalentDescription name={homeland.talent.name} description={homeland.talent.description} />
+            : <TalentSelection talents={["Primitive", "Uncivilized"]} onSelection={(talent) => { this._selectedTalent = talent; }} />;
+
         return (
             <div className="page">
                 <div className="header-text">{homeland.name}</div>
                 {regionContent}
                 <div className="panel">
                     <div className="header-small">TALENT</div>
-                    <TalentDescription name={homeland.talent.name} description={homeland.talent.description} />
+                    {talent}
                 </div>
                 <div className="panel">
                     <div className="header-small">LANGUAGE OPTIONS</div>
@@ -93,6 +100,10 @@ export class HomelandDetailsPage extends React.Component<IPageProperties, {}> {
 
         if (this._selectedRegion) {
             character.region = this._selectedRegion;
+        }
+
+        if (this._selectedTalent) {
+            character.addTalent(this._selectedTalent);
         }
 
         Navigation.navigateToPage(PageIdentity.Attributes);

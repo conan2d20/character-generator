@@ -44,6 +44,21 @@ export enum HomeLand {
     Kordafan,
     Tombalku,
     Xuchotl,
+
+    // Kull
+    Atlantis,
+    IslesOfThePicts,
+    Commoria,
+    Thule,
+    Kamelia,
+    Valusia,
+    Farsun,
+    Verulia,
+    Zarfhaana,
+    Thurania,
+    Grondar,
+    Lemuria,
+    ElderStygia,
 }
 
 class HomelandModel {
@@ -114,6 +129,20 @@ export class Homelands {
         [HomeLand.Kordafan]: new HomelandModel("Kordafan", TalentsHelper.getTalent("Hunter"), ["Kordafani"], 99, Source.Adventurer),
         [HomeLand.Tombalku]: new HomelandModel("Tombalku", TalentsHelper.getTalent("Honest Corruption"), ["Tombalkan"], 99, Source.Adventurer),
         [HomeLand.Xuchotl]: new HomelandModel("Xuchotl", TalentsHelper.getTalent("Strife"), ["Xuchotli"], 99, Source.Adventurer),
+
+        [HomeLand.Atlantis]: new HomelandModel("Atlantis", null, ["Atlantean"], 3, Source.Kull),
+        [HomeLand.IslesOfThePicts]: new HomelandModel("Kaa-u, Isles of the Picts", TalentsHelper.getTalent("Savage Court"), ["Pictish"], 5, Source.Kull),
+        [HomeLand.Commoria]: new HomelandModel("Commoria", TalentsHelper.getTalent("Faded Glory"), ["Commorian"], 8, Source.Kull),
+        [HomeLand.Thule]: new HomelandModel("Thule", TalentsHelper.getTalent("Decadent"), ["Thulian"], 10, Source.Kull),
+        [HomeLand.Kamelia]: new HomelandModel("Kamelia", TalentsHelper.getTalent("Decadent"), ["Kamelian"], 13, Source.Kull),
+        [HomeLand.Valusia]: new HomelandModel("Valusia", TalentsHelper.getTalent("Cosmopolitan"), ["Valusian"], 21, Source.Kull),
+        [HomeLand.Farsun]: new HomelandModel("Farsun", TalentsHelper.getTalent("Resplendent"), ["Old Tongue"], 24, Source.Kull),
+        [HomeLand.Verulia]: new HomelandModel("Verulia", TalentsHelper.getTalent("Treacherous"), ["Verulian"], 27, Source.Kull),
+        [HomeLand.Zarfhaana]: new HomelandModel("Zarfhaana", TalentsHelper.getTalent("Pastoral"), ["Lost Tongue"], 30, Source.Kull),
+        [HomeLand.Thurania]: new HomelandModel("Thurania", TalentsHelper.getTalent("Savage Court"), ["Lost Tongue"], 33, Source.Kull),
+        [HomeLand.Grondar]: new HomelandModel("Grondar", TalentsHelper.getTalent("Of Saddle and Bow"), ["Grond"], 36, Source.Kull),
+        [HomeLand.Lemuria]: new HomelandModel("Lemuria", TalentsHelper.getTalent("Sea Raider"), ["Lemurian"], 38, Source.Kull),
+        [HomeLand.ElderStygia]: new HomelandModel("Elder Stygia", TalentsHelper.getTalent("Desert-born"), ["Lost Tongue"], 40, Source.Kull),
     };
 
     private _regions: { [id: number]: string[] } = {
@@ -160,6 +189,19 @@ export class Homelands {
         [HomeLand.BlackCoast]: ["Adebayo", "Adedji", "Adeoye", "Amaku", "Amente", "Ayele", "Bengu", "Bunda", "Enanga", "Endale", "Kagale", "Kahero", "Kamara", "Kenyatta", "K'Gari", "Makara", "Mganga", "Mubale", "Mwando", "Nastasen", "N'Komo", "Okang", "Okunnu", "Shanaka", "Talharqa", "Adagala", "Adebayo", "Adedji", "Adeoye", "Amaku", "Amente", "Ayele", "Bengu", "Bunda", "Enanga", "Endale", "Kagale", "Kahero", "Kamara", "Karanja", "Kashta", "Kassaye", "Kenyatta", "K'Gari", "Khama", "Makara", "Matano", "Mayanja", "Mganga", "Morake", "Mshila", "Mubale", "Mwando", "Mwangi", "Nastasen", "N'Komo", "Okang", "Okondo", "Okunnu", "Shanaka", "Talharqa", "Zenyami"],
         [HomeLand.Ghulistan]: ["Aarash", "Aazar", "Badeed", "Farjaad", "Gulrez", "Isaad", "Jaah", "Lodhi", "Mirwais", "Shahmeer", "Yar"],
         [HomeLand.Kosala]: ["Ahen", "Azarah", "Bota", "Canto", "Fendi", "Hanud", "Qalandar", "Rabaani", "Wase", "Zabdas"],
+        [HomeLand.Atlantis]: ["Acco", "Ah-Lun", "Baroc", "Co-Nal", "Gar", "Gram", "Kellan", "Maddan", "Nemmed", "Relkor", "Tor-Na", "Zheath"],
+        [HomeLand.Lemuria]: ["Alatas", "Chodak", "Dorgon", "Harukor", "Heshen", "Kennan", "Koldo", "Korul", "Seriath", "Vertai"],
+        [HomeLand.IslesOfThePicts]: ["Adar", "Crall", "Colla", "Duac", "Ellar", "Gir-ik", "Ka-noc", "Ra-nu", "Tor-nu", "Urag"],
+        [HomeLand.Grondar]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.ElderStygia]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.Thurania]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.Zarfhaana]: ["Amadu", "Arasces", "Figel", "Kalim", "Naram", "Ninus", "Obares", "Shulla", "Uan", "Vaballa"],
+        [HomeLand.Commoria]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Farsun]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Kamelia]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Thule]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Valusia]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
+        [HomeLand.Verulia]: ["Acco", "Borban", "Cathan", "Docius", "Elkamar", "Fuano", "Hannon", "Magos", "Silicar", "Quainu"],
     };
 
     private _femaleNames: { [id: number]: string[] } = {
@@ -201,6 +243,19 @@ export class Homelands {
         [HomeLand.BlackCoast]: ["Aluna", "Asminia", "Ayana", "Behare", "Chanya", "Dalila", "Erza", "Hamere", "Iras", "Kanika", "Katura", "Kenyetta", "Maiba", "Massassi", "Micere", "Mirembe", "Nagesa", "Nehanda", "Nmambi", "Ntara", "Ntuli", "Nyanath", "Qalhata", "Saba", "Sala", "Sudati", "Zensele", "Aluna", "Asminia", "Ayana", "Behare", "Chanya", "Dalila", "Erza", "Ghida", "Ghnima", "Hamere", "Hasna", "Hassiba", "Iras", "Kanika", "Karimala", "Katura", "Kenyetta", "Maiba", "Massassi", "Micere", "Mirembe", "Nagesa", "Najet", "Nehanda", "Nezha", "Nmambi", "Ntara", "Ntuli", "Nyanath", "Qalhata", "Saba", "Sala", "Sudati", "Tafat", "Tanest", "Tiziri", "Wrina", "Zensele", "Zergha"],
         [HomeLand.Ghulistan]: ["Abrisham", "Afri", "Benesh", "Damsa", "Gulnoor", "Kaamsiha", "Moska", "Nageenga", "Permaz", "Shadleen", "Yasmoon"],
         [HomeLand.Kosala]: ["Ahna", "Bailya", "Llao", "Losana", "Maesa", "Samsi", "Tanit", "Tuvé", "Wutu", "Zainab"],
+        [HomeLand.Atlantis]: ["Ai-La", "Bros-Na", "En-Gi", "Huna", "Kea", "Lia", "Locha", "Maer", "Nes-Ta", "Sinna", "Thola", "Unna"],
+        [HomeLand.Lemuria]: ["Deki", "Duma", "Kanti", "Methia", "Namhla", "Nyima", "Pala", "Raden", "Rasuna", "Takla"],
+        [HomeLand.IslesOfThePicts]: ["Ail-sa", "Begis", "Dola-na", "Dua-na", "Eriu", "Euna", "Gelis", "Mo-ra", "Os-la", "Rao-na"],
+        [HomeLand.Grondar]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.ElderStygia]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.Thurania]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.Zarfhaana]: ["Abiella", "Adaya", "Chae", "Devasha", "Gilada", "Hasina", "Ivria", "Kitra", "Lisha", "Nemera"],
+        [HomeLand.Commoria]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Farsun]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Kamelia]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Thule]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Valusia]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
+        [HomeLand.Verulia]: ["Athula", "Dasa", "Etanna", "Mariol", "Mika", "Nayana", "Nimala", "Ranga", "Tanit", "Zoysa"],
     };
 
     getHomelands() {
@@ -397,6 +452,56 @@ export class Homelands {
         return homeland;
     }
 
+    generateKullHomeland() {
+        var homeland = HomeLand.Valusia;
+        var d1 = Math.floor(Math.random() * 20) + 1;
+        var d2 = Math.floor(Math.random() * 20) + 1;
+
+        switch (d1 + d2) {
+            case 2: 
+            case 3: homeland = HomeLand.Atlantis; break;
+            case 4: 
+            case 5: homeland = HomeLand.IslesOfThePicts; break;
+            case 6: 
+            case 7:
+            case 8: homeland = HomeLand.Commoria; break;
+            case 9:
+            case 10: homeland = HomeLand.Thule; break;
+            case 11:
+            case 12: 
+            case 13: homeland = HomeLand.Kamelia; break;
+            case 14: 
+            case 15:
+            case 16: 
+            case 17:
+            case 18:
+            case 19: 
+            case 20: 
+            case 21: homeland = HomeLand.Valusia; break;
+            case 22:
+            case 23:
+            case 24: homeland = HomeLand.Farsun; break;
+            case 25:
+            case 26:
+            case 27: homeland = HomeLand.Verulia; break;
+            case 28:
+            case 29:
+            case 30: homeland = HomeLand.Zarfhaana; break;
+            case 31:
+            case 32:
+            case 33: homeland = HomeLand.Thurania; break;
+            case 34:
+            case 35:
+            case 36: homeland = HomeLand.Grondar; break;
+            case 37:
+            case 38: homeland = HomeLand.Lemuria; break;
+            case 39:
+            case 40: homeland = HomeLand.ElderStygia; break;
+        }
+
+        return homeland;
+    }
+
     getRegions(homeland: HomeLand) {
         return this._regions[homeland];
     }
@@ -409,7 +514,9 @@ export class Homelands {
 
     applyHomeland(homeland: HomeLand) {
         var home = this.getHomeland(homeland);
-        character.addTalent(home.talent.name);
+        if (home.talent) {
+            character.addTalent(home.talent.name);
+        }
 
         if (home.languageOptions.length === 1) {
             character.addLanguage(home.languageOptions[0]);
