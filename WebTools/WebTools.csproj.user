@@ -10,7 +10,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <ToolsVersionPromptShown>3.1</ToolsVersionPromptShown>
+    <ToolsVersionPromptShown>3.8</ToolsVersionPromptShown>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
