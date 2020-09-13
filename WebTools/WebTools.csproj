@@ -73,6 +73,7 @@
     <Content Include="res\fonts\romanantique-webfont.woff2" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
+    <Content Include="res\img\news.png" />
     <Content Include="res\img\sheet.jpg" />
     <Content Include="res\img\sheet.png" />
     <Content Include="res\img\sheet_light.png" />
@@ -155,6 +156,7 @@
     <TypeScriptCompile Include="src\helpers\stories.ts" />
     <TypeScriptCompile Include="src\helpers\talents.ts" />
     <TypeScriptCompile Include="src\helpers\warStories.ts" />
+    <TypeScriptCompile Include="src\news.ts" />
     <TypeScriptCompile Include="src\pages\archetypeDetailsPage.tsx" />
     <TypeScriptCompile Include="src\pages\archetypePage.tsx" />
     <TypeScriptCompile Include="src\pages\attributeAspectDetailsPage.tsx" />

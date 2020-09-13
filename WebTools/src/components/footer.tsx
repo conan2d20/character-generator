@@ -1,6 +1,8 @@
 ﻿import * as React from 'react';
 import {character} from '../common/character';
 import {Events, EventIdentity} from '../common/eventChannel';
+import { Dialog } from './dialog';
+import { News } from '../news';
 
 interface IFooterProperties {
 }
@@ -40,6 +42,9 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
                 </div>
                 <div className="page-footer-icon-container" onClick={() => { this.feedback(); } }>
                     <img src="res/img/feedback.png" className="page-footer-icon" title="Provide feedback"/>
+                </div>
+                <div className="page-footer-icon-container" onClick={() => { this.whatsNew(); }}>
+                    <img src="res/img/news.png" className="page-footer-icon" title="What's new?" />
                 </div>
             </div>
         );
@@ -101,5 +106,9 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
         else {
             alert("Please allow popup windows for this site.");
         }
+    }
+
+    private whatsNew() {
+        Dialog.show(News.getWhatsNew());
     }
 }

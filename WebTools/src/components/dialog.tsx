@@ -27,7 +27,7 @@ class _Dialog extends React.Component<IDialogProperties, {}> {
             <div className={visibilityClass}>
                 <div className="dialog-bg"></div>
                 <div className={containerClass}>
-                    {this.props.message}
+                    <div dangerouslySetInnerHTML={{ __html: message }}></div>
                     <br/>
                     <div className="button-container">
                         <Button text="OK" className="button" onClick={() => { Dialog.hide() } } />
