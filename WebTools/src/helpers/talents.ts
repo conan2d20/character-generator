@@ -841,7 +841,7 @@ export class Talents {
                 1),
             new TalentModel(
                 "See the Soul",
-                "While you might not literally see the human soul, you can intuitively relate your alternate senses to the physical world. When dealing with mortal humans you may substitute your Insight skill for Observation, Social, Stealth, or Thievery.",
+                "While you might not literally see the human soul, you can intuitively relate your alternate senses to the physical world. When dealing with mortal humans you may substitute your Insight skill for Society and Thievery.",
                 [new TalentPrerequisite("Sixth Sense")],
                 1),
             new TalentModel(
