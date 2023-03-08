@@ -1,0 +1,318 @@
+﻿.button,
+.button-next {
+    width: 220px;
+    margin-top: 30px;
+    padding: 15px 10px 15px 10px;
+    background-color: #5f643e;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+}
+    .button:hover,
+    .button-next:hover {
+        opacity: 1.0;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .25);
+    }
+
+input[type=submit] {
+    width: 220px;
+    margin-top: 30px;
+    padding: 5px 10px 5px 10px;
+    background-color: #5f643e;
+    border-color: transparent;
+    color: white !important;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.button-next {
+    float: right;
+}
+
+.button-small {
+    width: 120px;
+    padding: 15px 10px 15px 10px;
+    background-color: #5f643e;
+    color: white !important;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+    border: 0;
+}
+    .button-small:hover {
+        opacity: 1.0;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .25);
+    }
+
+.button-title {
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.button-container .button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkbox-text {
+    position: relative;
+    bottom: 8px;
+    left: 5px;
+}
+
+.die {
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: large;
+    display: inline-block;
+}
+  .die-selected {
+    border: 3px solid darkgray;
+  }
+
+.eq {
+    line-height: 0.1em;
+}
+
+.header {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(/img/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-family: roman_antiqueregular;
+}
+
+.history {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: #323232;
+    color: white;
+    padding: 10px 10px 60px 10px;
+    z-index: -1;
+    border-radius: 4px 4px 0px 20px;
+}
+
+.history-item {
+    cursor: pointer;
+}
+
+.page {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    background: url(/img/bg_.png);
+    border: 10px solid #474747;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 2px 2px 10px 2px;
+    animation: page-fade-in ease .3s;
+        -moz-animation: page-fade-in ease .3s;
+        -webkit-animation: page-fade-in ease .3s;
+        -o-animation: page-fade-in ease .3s;
+}
+
+.page-out {
+    margin-top: 20px;
+    animation: page-fade-out forwards .3s ease;
+        -moz-animation: page-fade-out forwards .3s ease;
+        -webkit-animation: page-fade-out forwards .3s ease;
+        -o-animation: page-fade-out forwards .3s ease;
+}
+
+.page-footer {
+    display: flex;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: #323232;
+    color: white;
+    border-radius: 20px 4px 4px 20px;
+    height: 40px;
+    z-index: 100;
+    
+    animation: page-fade-in ease .7s;
+        -moz-animation: page-fade-in ease .7s;
+        -webkit-animation: page-fade-in ease .7s;
+        -o-animation: page-fade-in ease .7s;
+}
+
+.page-footer-icon-container {
+    padding: 5px 6px 0px 6px;
+}
+
+.page-footer-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.selection-header {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.selection-header-small {
+    font-size: medium;
+    font-weight: normal;
+    text-align: left;
+}
+
+.selection-list-header {
+    background-color: #5f643e;
+    color: white;
+    font-weight: bold;
+}
+
+.view-character {
+    position: fixed;
+    background-color: rgba(32, 32, 32, .6);
+		width: 50px;
+		height: 40px;
+    padding: 10px 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+
+		-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+    user-select: none;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 800px) {
+    .header {
+        width: 512px;
+        height: 61px;
+        font-size: x-large;
+        margin-top: 10px;
+        padding-top: 8px;
+    }
+
+    .header-title {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .button-small {
+        width: 60px;
+    }
+
+    .header {
+        width: 320px;
+        height: 41px;
+        padding-top: 5px;
+        margin-top: 20px;
+        font-size: medium;
+    }
+
+    .header-title {
+        padding-top: 6px;
+    }
+
+    .selection-header {
+      font-size: small !important;
+	    text-transform: uppercase;
+    }
+}
+
+/* ANIMATION */
+
+@keyframes page-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+@-moz-keyframes page-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+@-webkit-keyframes page-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+@-o-keyframes page-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+@keyframes page-fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+@-moz-keyframes page-fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+@-webkit-keyframes page-fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+@-o-keyframes page-fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
