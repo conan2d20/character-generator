@@ -1,7 +1,5 @@
 ﻿import * as React from 'react';
 import { EventIdentity, Events } from '../common/eventChannel';
-import { News } from '../news';
-import { Dialog } from './dialog';
 import { History } from './history';
 
 interface IFooterProperties {}
@@ -60,7 +58,12 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
             title="View character"
           />
         </div>
-        <div className="page-footer-icon-container">
+        <div
+          className="page-footer-icon-container"
+          onClick={() => {
+            this.feedback();
+          }}
+        >
           <img
             src={`${BASE_URL}img/feedback.png`}
             className="page-footer-icon"
@@ -129,8 +132,7 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
     }
   }
 
-  private feedback() {
-    const url = 'https://goo.gl/forms/z8eOMDViQYig8FM73';
+  private openExternalUrl(url: string) {
     const win = window.open(url, '_blank');
     if (win) {
       win.focus();
@@ -139,7 +141,15 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
     }
   }
 
+  private feedback() {
+    this.openExternalUrl(
+      'https://github.com/conan2d20/character-generator/wiki/Feedback'
+    );
+  }
+
   private whatsNew() {
-    Dialog.show(News.getWhatsNew());
+    this.openExternalUrl(
+      'https://github.com/conan2d20/character-generator/wiki/Change-Log'
+    );
   }
 }
