@@ -1,16 +1,13 @@
-# Conan2d20
+# Conan 2d20 Character Generator
 
-## Prerequisites
-- Visual Studio 2019 (Community or higher).
-- NodeJS (v10.13.0 or higher).
-- TypeScript 3.1 or compatible version.
+This project is based on the character generator created by [azjerei](https://github.com/azjerei)
 
-## Getting Started
-1. Open a command prompt in the WebTools/ folder and type ```npm install``` to install node modules.
-2. Open the solution in Visual Studio.
-3. Compile the project.
+---
 
-Compiling will use webpack to generate a master script in the dist/ folder.
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
-## Contributing
-Contributions are welcome. Use a PR to get your changes into the master branch.
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
