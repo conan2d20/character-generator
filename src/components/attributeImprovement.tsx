@@ -25,7 +25,7 @@ export class AttributeImprovement extends React.Component<
       <img
         style={{ float: 'left' }}
         height="20"
-        src="img/dec.png"
+        src={`${BASE_URL}img/dec.png`}
         onClick={() => {
           this.onDecrease();
         }}
@@ -36,7 +36,7 @@ export class AttributeImprovement extends React.Component<
       <img
         style={{ float: 'right' }}
         height="20"
-        src="img/inc.png"
+        src={`${BASE_URL}img/inc.png`}
         onClick={() => {
           this.onIncrease();
         }}

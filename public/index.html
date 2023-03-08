@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="icon" href="favicon.ico" />
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <link href="css/sourceselection.css" rel="stylesheet" />
-    <link href="css/attributes.css" rel="stylesheet" />
-    <link href="css/characterSheet.css" rel="stylesheet" />
-    <link href="css/common.css" rel="stylesheet" />
-    <link href="css/components.css" rel="stylesheet" />
-    <link href="css/dialog.css" rel="stylesheet" />
-    <link href="css/skills.css" rel="stylesheet" />
-    <link href="css/printableSheet.css" rel="stylesheet" />
     <title><%= TITLE %></title>
+    <meta name="description" content="<%= DESCRIPTION %>" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <link href="<%= BASE_URL %>css/sourceselection.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>css/attributes.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>css/characterSheet.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>css/common.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>css/components.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>css/dialog.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>css/skills.css" rel="stylesheet" />
+    <link href="<%= BASE_URL %>css/printableSheet.css" rel="stylesheet" />
     <script type="text/javascript">
       function setHeaderText(text) {
         document.getElementById('header').innerText = text;
@@ -23,21 +24,13 @@
     </script>
   </head>
   <body class="page-background" onload="setupGuard();">
-    <div style="display: none">
-      <script>
-        var images = new Array();
-        function preload() {
-          for (i = 0; i < preload.arguments.length; i++) {
-            images[i] = new Image();
-            images[i].src = preload.arguments[i];
-          }
-        }
-        preload('img/logo.png', 'img/bg_green.jpg', 'img/bg_yellow.jpg');
-      </script>
-    </div>
     <div class="content-container-fullscreen">
-      <a href="/"><img src="img/logo.png" class="logo-large" /></a>
-      <a href="/"><img src="img/logo_small.png" class="logo-small" /></a>
+      <a href="<%= BASE_URL %>">
+        <img src="<%= BASE_URL %>img/logo.png" class="logo-large" />
+      </a>
+      <a href="<%= BASE_URL %>">
+        <img src="<%= BASE_URL %>img/logo_small.png" class="logo-small" />
+      </a>
       <div class="page-title" id="header"></div>
     </div>
     <div class="content-container">

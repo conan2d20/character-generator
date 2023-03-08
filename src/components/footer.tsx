@@ -43,7 +43,7 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
         >
           <img
             id="history-btn"
-            src="img/history.png"
+            src={`${BASE_URL}img/history.png`}
             className="page-footer-icon"
             title="History"
           />
@@ -55,14 +55,14 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
           }}
         >
           <img
-            src="img/sheet.png"
+            src={`${BASE_URL}img/sheet.png`}
             className="page-footer-icon"
             title="View character"
           />
         </div>
         <div className="page-footer-icon-container">
           <img
-            src="img/feedback.png"
+            src={`${BASE_URL}img/feedback.png`}
             className="page-footer-icon"
             title="Provide feedback"
           />
@@ -74,7 +74,7 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
           }}
         >
           <img
-            src="img/news.png"
+            src={`${BASE_URL}img/news.png`}
             className="page-footer-icon"
             title="What's new?"
           />

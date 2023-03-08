@@ -17,9 +17,10 @@ function getVersion() {
   ].join('');
 }
 
-module.exports = (env, arg) => {
+module.exports = (_env, arg) => {
   const isProdMode = arg.mode === 'production';
   const VERSION = isProdMode ? getVersion() : 'DEV';
+  const BASE_URL = isProdMode ? '/character-generator/' : '/';
 
   return {
     mode: isProdMode ? 'production' : 'development',
@@ -47,6 +48,7 @@ module.exports = (env, arg) => {
     plugins: [
       new webpack.DefinePlugin({
         VERSION: JSON.stringify(VERSION),
+        BASE_URL: JSON.stringify(BASE_URL),
       }),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin(
@@ -55,8 +57,10 @@ module.exports = (env, arg) => {
           {
             template: 'public/index.html',
             templateParameters: {
-              TITLE: `Robert E Howard's CONAN`,
+              TITLE: `Robert E. Howard's Conan - Character Generator`,
+              DESCRIPTION: `Online character generator for Robert E. Howard's Conan: Adventures in an Age Undreamed Of by Modiphius Entertainment`,
               VERSION,
+              BASE_URL,
             },
           },
           isProdMode
