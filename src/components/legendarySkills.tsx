@@ -28,7 +28,7 @@ export class LegendarySkill extends React.Component<
     const dec = showDecrease ? (
       <img
         height="20"
-        src="/img/dec.png"
+        src="img/dec.png"
         onClick={() => {
           this.onDecrease();
         }}
@@ -38,7 +38,7 @@ export class LegendarySkill extends React.Component<
     const inc = showIncrease ? (
       <img
         height="20"
-        src="/img/inc.png"
+        src="img/inc.png"
         onClick={() => {
           this.onIncrease();
         }}
