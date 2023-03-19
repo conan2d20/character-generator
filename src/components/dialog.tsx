@@ -17,9 +17,7 @@ class _Dialog extends React.Component<IDialogProperties, {}> {
 
     const visibilityClass = isVisible ? 'dialog-visible' : 'dialog-hidden';
 
-    const containerClass = isVisible
-      ? 'dialog-container dialog-container-visible'
-      : 'dialog-container';
+    const containerClass = isVisible ? 'dialog-container dialog-container-visible' : 'dialog-container';
 
     return (
       <div className={visibilityClass}>

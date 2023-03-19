@@ -5,10 +5,7 @@ interface IEquipmentListProperties {
   onSelected: (eq: string, index: number) => void;
 }
 
-export class EquipmentList extends React.Component<
-  IEquipmentListProperties,
-  {}
-> {
+export class EquipmentList extends React.Component<IEquipmentListProperties, {}> {
   private _selectCount: number;
 
   constructor(props: IEquipmentListProperties) {
@@ -37,12 +34,7 @@ export class EquipmentList extends React.Component<
         return (
           <select
             key={i}
-            onChange={(e) =>
-              this.props.onSelected(
-                eqs[(e.target as HTMLSelectElement).selectedIndex],
-                index
-              )
-            }
+            onChange={(e) => this.props.onSelected(eqs[(e.target as HTMLSelectElement).selectedIndex], index)}
           >
             {eqList}
           </select>

@@ -10,10 +10,7 @@ interface IAttributeImprovementProperties {
   showDecrease: boolean;
 }
 
-export class AttributeImprovement extends React.Component<
-  IAttributeImprovementProperties,
-  {}
-> {
+export class AttributeImprovement extends React.Component<IAttributeImprovementProperties, {}> {
   constructor(props: IAttributeImprovementProperties) {
     super(props);
   }
@@ -45,9 +42,7 @@ export class AttributeImprovement extends React.Component<
 
     return (
       <div>
-        <div className="attribute-container">
-          {AttributesHelper.getAttributeName(attribute)}
-        </div>
+        <div className="attribute-container">{AttributesHelper.getAttributeName(attribute)}</div>
         <div className="attribute-value">
           {dec}
           {value}
@@ -102,10 +97,7 @@ class AttributeContainer {
   }
 }
 
-export class AttributeImprovementCollection extends React.Component<
-  AttributeImprovementCollectionProperties,
-  {}
-> {
+export class AttributeImprovementCollection extends React.Component<AttributeImprovementCollectionProperties, {}> {
   private _absoluteMax: number = 14;
 
   private _points: number;
@@ -203,8 +195,7 @@ export class AttributeImprovementCollection extends React.Component<
 
         for (var i = 0; i < this._attributes.length; i++) {
           var a = this._attributes[i];
-          a.showDecrease =
-            (a.value > a.minValue && numDec < 2) || a.value === a.maxValue;
+          a.showDecrease = (a.value > a.minValue && numDec < 2) || a.value === a.maxValue;
           a.showIncrease = a.value < a.maxValue;
         }
 
@@ -251,8 +242,7 @@ export class AttributeImprovementCollection extends React.Component<
 
         for (var i = 0; i < this._attributes.length; i++) {
           var a = this._attributes[i];
-          a.showDecrease =
-            (a.value > a.minValue && numDec < 2) || a.value === a.maxValue;
+          a.showDecrease = (a.value > a.minValue && numDec < 2) || a.value === a.maxValue;
           a.showIncrease = this._points > 0 && a.value < a.maxValue;
         }
 

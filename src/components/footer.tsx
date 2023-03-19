@@ -39,12 +39,7 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
             this.showHistory();
           }}
         >
-          <img
-            id="history-btn"
-            src={`${BASE_URL}img/history.png`}
-            className="page-footer-icon"
-            title="History"
-          />
+          <img id="history-btn" src={`${BASE_URL}img/history.png`} className="page-footer-icon" title="History" />
         </div>
         <div
           className="page-footer-icon-container"
@@ -52,11 +47,7 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
             this.showCharacter();
           }}
         >
-          <img
-            src={`${BASE_URL}img/sheet.png`}
-            className="page-footer-icon"
-            title="View character"
-          />
+          <img src={`${BASE_URL}img/sheet.png`} className="page-footer-icon" title="View character" />
         </div>
         <div
           className="page-footer-icon-container"
@@ -64,11 +55,7 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
             this.feedback();
           }}
         >
-          <img
-            src={`${BASE_URL}img/feedback.png`}
-            className="page-footer-icon"
-            title="Provide feedback"
-          />
+          <img src={`${BASE_URL}img/feedback.png`} className="page-footer-icon" title="Provide feedback" />
         </div>
         <div
           className="page-footer-icon-container"
@@ -76,11 +63,7 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
             this.whatsNew();
           }}
         >
-          <img
-            src={`${BASE_URL}img/news.png`}
-            className="page-footer-icon"
-            title="What's new?"
-          />
+          <img src={`${BASE_URL}img/news.png`} className="page-footer-icon" title="What's new?" />
         </div>
       </div>
     );
@@ -142,14 +125,10 @@ export class Footer extends React.Component<IFooterProperties, IFooterState> {
   }
 
   private feedback() {
-    this.openExternalUrl(
-      'https://github.com/conan2d20/character-generator/wiki/Feedback'
-    );
+    this.openExternalUrl('https://github.com/conan2d20/character-generator/wiki/Feedback');
   }
 
   private whatsNew() {
-    this.openExternalUrl(
-      'https://github.com/conan2d20/character-generator/wiki/Change-Log'
-    );
+    this.openExternalUrl('https://github.com/conan2d20/character-generator/wiki/Change-Log');
   }
 }

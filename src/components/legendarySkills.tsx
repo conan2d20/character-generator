@@ -12,10 +12,7 @@ interface ILegendarySkillProperties {
   showLegendary?: boolean;
 }
 
-export class LegendarySkill extends React.Component<
-  ILegendarySkillProperties,
-  {}
-> {
+export class LegendarySkill extends React.Component<ILegendarySkillProperties, {}> {
   constructor(props: ILegendarySkillProperties) {
     super(props);
   }
@@ -50,9 +47,7 @@ export class LegendarySkill extends React.Component<
         <tbody>
           <tr>
             <td>
-              <div className="skill-name">
-                {SkillsHelper.getSkillName(skill)}
-              </div>
+              <div className="skill-name">{SkillsHelper.getSkillName(skill)}</div>
             </td>
             <td>
               {dec}&nbsp; &nbsp;{inc}
@@ -100,12 +95,7 @@ class SkillContainer {
   showLegendary: boolean;
   isLegendary: boolean;
 
-  constructor(
-    skill: Skill,
-    value: number,
-    showDecrease: boolean,
-    showIncrease: boolean
-  ) {
+  constructor(skill: Skill, value: number, showDecrease: boolean, showIncrease: boolean) {
     this.skill = skill;
     this.value = value;
     this.minValue = value;
@@ -117,10 +107,7 @@ class SkillContainer {
   }
 }
 
-export class LegendarySkills extends React.Component<
-  ILegendarySkillsProperties,
-  {}
-> {
+export class LegendarySkills extends React.Component<ILegendarySkillsProperties, {}> {
   private _points: number;
   private _skills: SkillContainer[];
   private _legendary: Skill[];
@@ -133,9 +120,7 @@ export class LegendarySkills extends React.Component<
     this._legendary = [];
 
     for (var i = 0; i < character.skills.length; i++) {
-      this._skills.push(
-        new SkillContainer(i, character.skills[i].expertise, false, true)
-      );
+      this._skills.push(new SkillContainer(i, character.skills[i].expertise, false, true));
     }
   }
 
@@ -148,9 +133,7 @@ export class LegendarySkills extends React.Component<
           skill={s.skill}
           isLegendary={s.isLegendary}
           showDecrease={s.showDecrease}
-          showIncrease={
-            s.showIncrease && character.skills[s.skill].expertise < s.maxValue
-          }
+          showIncrease={s.showIncrease && character.skills[s.skill].expertise < s.maxValue}
           showLegendary={s.showLegendary}
         />
       );
@@ -186,8 +169,7 @@ export class LegendarySkills extends React.Component<
       }
 
       container.showDecrease = container.value > container.minValue;
-      container.showIncrease =
-        container.value < container.maxValue && this._points > 0;
+      container.showIncrease = container.value < container.maxValue && this._points > 0;
     });
 
     if (numEligible < 3) {
@@ -217,8 +199,7 @@ export class LegendarySkills extends React.Component<
       }
 
       container.showDecrease = container.value > container.minValue;
-      container.showIncrease =
-        container.value < container.maxValue && this._points > 0;
+      container.showIncrease = container.value < container.maxValue && this._points > 0;
     });
 
     if (numEligible < 3 && this._points === 0) {

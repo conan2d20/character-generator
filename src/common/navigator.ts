@@ -1,29 +1,26 @@
 ﻿import { PageIdentity } from '../pages/pageFactory';
-import { Events, EventIdentity } from './eventChannel';
+import { EventIdentity, Events } from './eventChannel';
 
 export class Navigator {
-    constructor() {
-    }
+  constructor() {}
 
-    navigateToPage(pageId: PageIdentity) {
-        var page = document.getElementsByClassName('page')[0];
-        page.classList.add('page-out');
+  navigateToPage(pageId: PageIdentity) {
+    var page = document.getElementsByClassName('page')[0];
+    page.classList.add('page-out');
 
-        setTimeout(() => {
-            Events.signal(EventIdentity.ShowPage, pageId);
-        },
-        400);
-    }
+    setTimeout(() => {
+      Events.signal(EventIdentity.ShowPage, pageId);
+    }, 400);
+  }
 
-    navigateToHistory(pageId: PageIdentity) {
-        var page = document.getElementsByClassName('page')[0];
-        page.classList.add('page-out');
+  navigateToHistory(pageId: PageIdentity) {
+    var page = document.getElementsByClassName('page')[0];
+    page.classList.add('page-out');
 
-        setTimeout(() => {
-            Events.signal(EventIdentity.ShowPage, pageId);
-        },
-        400);
-    }
+    setTimeout(() => {
+      Events.signal(EventIdentity.ShowPage, pageId);
+    }, 400);
+  }
 }
 
 export const Navigation = new Navigator();
