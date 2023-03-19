@@ -130,7 +130,11 @@ export class EquipmentPage extends React.Component<IPageProperties, {}> {
 
     var weapon = EquipmentHelper.getProvenanceWeapons(this._equipmentSource)[this._weapon];
     var provenance = EquipmentHelper.getProvenances(this._equipmentSource)[this._provenance];
-    provenance = provenance.replace('...', ' ' + weapon + ' ');
+    provenance = provenance
+      .replace('...', ' ' + weapon + ' ')
+      .replace(/\s([,;])\s/g, '$1 ')
+      .replace(/\s+/g, ' ')
+      .trim();
 
     character.addEquipment(provenance);
     character.provenanceWeapon = weapon;
