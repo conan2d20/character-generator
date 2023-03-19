@@ -5,6 +5,7 @@ import { EventIdentity, Events } from './common/eventChannel';
 import { History } from './components/history';
 import { Page } from './pages/pageBase';
 import { PageIdentity } from './pages/pageFactory';
+import './styles/index.scss';
 
 class Application {
   private _activePage: PageIdentity;

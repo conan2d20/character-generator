@@ -1,7 +1,7 @@
 ﻿@font-face {
   font-family: 'roman_antiqueregular';
-  src: url('../fonts/romanantique-webfont.woff2') format('woff2'),
-    url('../fonts/romanantique-webfont.woff') format('woff');
+  src: url('~/src/assets/fonts/romanantique-webfont.woff2') format('woff2'),
+    url('~/src/assets/fonts/romanantique-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -37,6 +37,7 @@ body {
   font-family: roman_antiqueregular;
   padding: 0;
   margin: 0;
+  visibility: visible !important;
 }
 
 .body-content {
@@ -158,7 +159,7 @@ a:hover {
 }
 
 .page-background {
-  background-image: url(../img/bg_green.jpg);
+  background-image: url(~/src/assets/img/bg_green.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

@@ -7,20 +7,13 @@
     <meta name="description" content="<%= DESCRIPTION %>" />
     <link rel="canonical" href="https://conan2d20.github.io/character-generator/" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <link href="<%= BASE_URL %>css/sourceselection.css" rel="stylesheet" />
-    <link href="<%= BASE_URL %>css/attributes.css" rel="stylesheet" />
-    <link href="<%= BASE_URL %>css/characterSheet.css" rel="stylesheet" />
-    <link href="<%= BASE_URL %>css/common.css" rel="stylesheet" />
-    <link href="<%= BASE_URL %>css/components.css" rel="stylesheet" />
-    <link href="<%= BASE_URL %>css/dialog.css" rel="stylesheet" />
-    <link href="<%= BASE_URL %>css/skills.css" rel="stylesheet" />
     <script type="text/javascript">
       function setHeaderText(text) {
         document.getElementById('header').innerText = text;
       }
     </script>
   </head>
-  <body class="page-background" onload="setupGuard();">
+  <body class="page-background" onload="setupGuard();" style="visibility: hidden">
     <div class="content-container-fullscreen">
       <a href="<%= BASE_URL %>">
         <img src="<%= BASE_URL %>img/logo.png" class="logo-large" />

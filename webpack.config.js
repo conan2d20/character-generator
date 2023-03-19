@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function getVersion() {
   const now = new Date();
@@ -31,9 +32,17 @@ module.exports = (_env, arg) => {
     module: {
       rules: [
         {
-          test: /\.ts|\.tsx$/,
+          test: /\.(ts|tsx)$/i,
           use: 'ts-loader',
           exclude: /node_modules/,
+        },
+        {
+          test: /\.(png|jpg|woff|woff2)$/i,
+          type: 'asset/resource',
+        },
+        {
+          test: /\.(sa|sc|c)ss$/,
+          use: [isProdMode ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader'],
         },
       ],
     },
@@ -44,6 +53,7 @@ module.exports = (_env, arg) => {
       filename: isProdMode ? '[name].[contenthash:8].js' : 'bundle.js',
       path: path.resolve(__dirname, 'dist'),
       pathinfo: !isProdMode,
+      assetModuleFilename: 'assets/[hash][ext][query]',
     },
     plugins: [
       new webpack.DefinePlugin({
@@ -88,6 +98,10 @@ module.exports = (_env, arg) => {
             globOptions: { ignore: ['**/index.html'] },
           },
         ],
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].[contenthash:8].css',
+        chunkFilename: '[id].[contenthash:8].css',
       }),
     ],
     optimization: {

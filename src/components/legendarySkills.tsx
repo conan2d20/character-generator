@@ -1,7 +1,8 @@
 ﻿import * as React from 'react';
+import * as decIcon from '../assets/img/dec.png';
+import * as incIcon from '../assets/img/inc.png';
 import { character } from '../common/character';
 import { Skill, SkillsHelper } from '../helpers/skills';
-import { LegendaryCheckBox } from './LegendaryCheckBox';
 
 interface ILegendarySkillProperties {
   controller: LegendarySkills;
@@ -25,7 +26,7 @@ export class LegendarySkill extends React.Component<ILegendarySkillProperties, {
     const dec = showDecrease ? (
       <img
         height="20"
-        src={`${BASE_URL}img/dec.png`}
+        src={decIcon}
         onClick={() => {
           this.onDecrease();
         }}
@@ -35,7 +36,7 @@ export class LegendarySkill extends React.Component<ILegendarySkillProperties, {
     const inc = showIncrease ? (
       <img
         height="20"
-        src={`${BASE_URL}img/inc.png`}
+        src={incIcon}
         onClick={() => {
           this.onIncrease();
         }}

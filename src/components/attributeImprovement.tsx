@@ -1,4 +1,6 @@
 ﻿import * as React from 'react';
+import * as decIcon from '../assets/img/dec.png';
+import * as incIcon from '../assets/img/inc.png';
 import { character, CreationMode } from '../common/character';
 import { Attribute, AttributesHelper } from '../helpers/attributes';
 
@@ -22,7 +24,7 @@ export class AttributeImprovement extends React.Component<IAttributeImprovementP
       <img
         style={{ float: 'left' }}
         height="20"
-        src={`${BASE_URL}img/dec.png`}
+        src={decIcon}
         onClick={() => {
           this.onDecrease();
         }}
@@ -33,7 +35,7 @@ export class AttributeImprovement extends React.Component<IAttributeImprovementP
       <img
         style={{ float: 'right' }}
         height="20"
-        src={`${BASE_URL}img/inc.png`}
+        src={incIcon}
         onClick={() => {
           this.onIncrease();
         }}

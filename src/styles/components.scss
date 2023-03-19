@@ -89,7 +89,7 @@ input[type='submit'] {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../img/header-bg.png);
+  background-image: url(~/src/assets/img/bg_header.png);
   background-repeat: no-repeat;
   background-size: contain;
   color: white;
@@ -113,7 +113,7 @@ input[type='submit'] {
 
 .page {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-  background: url(../img/bg_yellow.jpg);
+  background: url(~/src/assets/img/bg_yellow.jpg);
   border: 10px solid #474747;
   border-radius: 5px;
   margin-top: 20px;
