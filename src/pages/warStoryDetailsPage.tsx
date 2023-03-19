@@ -27,11 +27,7 @@ export class WarStoryDetailsPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">SKILL IMPROVEMENTS</div>
           {skills}
         </div>
-        <Button
-          text="CUSTOMIZATION"
-          className="button-next"
-          onClick={() => this.onNext()}
-        />
+        <Button text="CUSTOMIZATION" className="button-next" onClick={() => this.onNext()} />
       </div>
     );
   }

@@ -48,9 +48,7 @@ export class FinishPage extends React.Component<IPageProperties, {}> {
     //   return <input key={i} type="hidden" name={d.name} value={d.value} />;
     // });
 
-    const names = HomelandsHelper.getNameSuggestions(character.gender)[
-      character.homeland
-    ].sort((a, b) => {
+    const names = HomelandsHelper.getNameSuggestions(character.gender)[character.homeland].sort((a, b) => {
       return a.localeCompare(b);
     });
     const suggestions = names.map((n, i) => {
@@ -60,19 +58,14 @@ export class FinishPage extends React.Component<IPageProperties, {}> {
     return (
       <div className="page">
         <div className="page-text">
-          Your character is finished. You can either use this reference to fill
-          in a character sheet by hand, or use the button at the bottom to
-          export your character to PDF.
+          Your character is finished. You can either use this reference to fill in a character sheet by hand, or use the
+          button at the bottom to export your character to PDF.
           <PDFNotice />
         </div>
         <div className="panel">
           <div className="header-small">NAME</div>
           <div>
-            <input
-              type="text"
-              onChange={() => this.onNameChanged()}
-              ref={(input) => (this.name = input)}
-            />
+            <input type="text" onChange={() => this.onNameChanged()} ref={(input) => (this.name = input)} />
             <div>
               <small>
                 <b>Suggestions: </b> <i>{suggestions}</i>
@@ -116,10 +109,8 @@ export class FinishPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">AGE</div>
           <div>
             <div>
-              Your default age has been calculated for you, but feel free to
-              type any age you wish. Remember that it should reflect your
-              character: Veterans are often middle aged, while young hot-heads
-              exist everywhere.
+              Your default age has been calculated for you, but feel free to type any age you wish. Remember that it
+              should reflect your character: Veterans are often middle aged, while young hot-heads exist everywhere.
             </div>
             <input
               type="text"

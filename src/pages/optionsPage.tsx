@@ -23,11 +23,7 @@ export class OptionsPage extends React.Component<IPageProperties, {}> {
           <td className="selection-header">{mode.name}</td>
           <td>{mode.description}</td>
           <td>
-            <Button
-              text="SELECT"
-              className="button-small"
-              onClick={() => this.selectMode(mode.id)}
-            />
+            <Button text="SELECT" className="button-small" onClick={() => this.selectMode(mode.id)} />
           </td>
         </tr>
       );
@@ -37,11 +33,7 @@ export class OptionsPage extends React.Component<IPageProperties, {}> {
       return (
         <div key={i}>
           <div className="source-select">
-            <CheckBox
-              value={i}
-              onChanged={(val) => this.onSourceChanged(val)}
-              isChecked={character.hasSource(i)}
-            />
+            <CheckBox value={i} onChanged={(val) => this.onSourceChanged(val)} isChecked={character.hasSource(i)} />
           </div>
           <div className="source-name">{src.name}</div>
         </div>

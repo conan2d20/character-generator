@@ -25,21 +25,16 @@ export class ArchetypeDetailsPage extends React.Component<IPageProperties, {}> {
     super(props);
 
     this._selectedEquipment = [];
-    ArchetypesHelper.getArchetype(character.archetype).equipment.forEach(
-      (eq) => {
-        if (eq.indexOf('|') > -1) {
-          const e = eq.split('|');
-          this._selectedEquipment.push(e[0]);
-        }
+    ArchetypesHelper.getArchetype(character.archetype).equipment.forEach((eq) => {
+      if (eq.indexOf('|') > -1) {
+        const e = eq.split('|');
+        this._selectedEquipment.push(e[0]);
       }
-    );
+    });
 
     var archetype = ArchetypesHelper.getArchetype(character.archetype);
 
-    if (
-      character.useWeedOfSorcery ||
-      character.archetype === Archetype.Veteran
-    ) {
+    if (character.useWeedOfSorcery || character.archetype === Archetype.Veteran) {
       this._talent = archetype.careerTalent.name;
     }
 
@@ -77,10 +72,7 @@ export class ArchetypeDetailsPage extends React.Component<IPageProperties, {}> {
         </div>
       ) : !character.useWeedOfSorcery ? (
         <div>
-          <TalentDescription
-            name={archetype.careerTalent.name}
-            description={archetype.careerTalent.description}
-          />
+          <TalentDescription name={archetype.careerTalent.name} description={archetype.careerTalent.description} />
         </div>
       ) : (
         <div>
@@ -127,16 +119,9 @@ export class ArchetypeDetailsPage extends React.Component<IPageProperties, {}> {
         </div>
         <div className="panel">
           <div className="header-small">EQUIPMENT</div>
-          <EquipmentList
-            equipment={equipment}
-            onSelected={(eq, index) => this.onEquipmentSelected(eq, index)}
-          />
+          <EquipmentList equipment={equipment} onSelected={(eq, index) => this.onEquipmentSelected(eq, index)} />
         </div>
-        <Button
-          text="NATURE"
-          className="button-next"
-          onClick={() => this.onNext()}
-        />
+        <Button text="NATURE" className="button-next" onClick={() => this.onNext()} />
       </div>
     );
   }
@@ -153,10 +138,7 @@ export class ArchetypeDetailsPage extends React.Component<IPageProperties, {}> {
   }
 
   private updateKits() {
-    if (
-      character.archetype !== Archetype.Priest &&
-      character.archetype !== Archetype.Scholar
-    ) {
+    if (character.archetype !== Archetype.Priest && character.archetype !== Archetype.Scholar) {
       return;
     }
 
@@ -186,10 +168,7 @@ export class ArchetypeDetailsPage extends React.Component<IPageProperties, {}> {
         }
       });
 
-      if (
-        character.useWeedOfSorcery ||
-        character.archetype === Archetype.Veteran
-      ) {
+      if (character.useWeedOfSorcery || character.archetype === Archetype.Veteran) {
         if (!this._talent) {
           Dialog.show('You need to select a talent before proceeding.');
           return;

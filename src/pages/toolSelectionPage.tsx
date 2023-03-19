@@ -1,45 +1,55 @@
 ﻿import * as React from 'react';
-import { Navigation } from '../common/navigator';
 import { SetHeaderText } from '../common/extensions';
-import { PageIdentity, IPageProperties } from './pageFactory';
+import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
 import { CheckBox } from '../components/checkBox';
 import { PageHeader } from '../components/pageHeader';
+import { IPageProperties, PageIdentity } from './pageFactory';
 
 enum Tool {
-    CharacterGenerator,
-    TalentsOverview,
+  CharacterGenerator,
+  TalentsOverview,
 }
 
 export class ToolSelectionPage extends React.Component<IPageProperties, {}> {
-    constructor(props: IPageProperties) {
-        super(props);
+  constructor(props: IPageProperties) {
+    super(props);
 
-        SetHeaderText("TOOLS");
-    }
+    SetHeaderText('TOOLS');
+  }
 
-    render() {
-        return (
-            <div className="page">
-                <div className="page-text">
-                    Select tool.
-                </div>
-                <div className="button-container">
-                    <Button text="Character Generator" className="button" onClick={() => { this.selectTool(Tool.CharacterGenerator); }} />
-                    <Button text="Talents Overview" className="button" onClick={() => { this.selectTool(Tool.TalentsOverview); }} />
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="page">
+        <div className="page-text">Select tool.</div>
+        <div className="button-container">
+          <Button
+            text="Character Generator"
+            className="button"
+            onClick={() => {
+              this.selectTool(Tool.CharacterGenerator);
+            }}
+          />
+          <Button
+            text="Talents Overview"
+            className="button"
+            onClick={() => {
+              this.selectTool(Tool.TalentsOverview);
+            }}
+          />
+        </div>
+      </div>
+    );
+  }
 
-    private selectTool(tool: Tool) {
-        switch (tool) {
-            case Tool.CharacterGenerator:
-                Navigation.navigateToPage(PageIdentity.Options);
-                break;
-            case Tool.TalentsOverview:
-                Navigation.navigateToPage(PageIdentity.TalentsOverview);
-                break;
-        }
+  private selectTool(tool: Tool) {
+    switch (tool) {
+      case Tool.CharacterGenerator:
+        Navigation.navigateToPage(PageIdentity.Options);
+        break;
+      case Tool.TalentsOverview:
+        Navigation.navigateToPage(PageIdentity.TalentsOverview);
+        break;
     }
+  }
 }
