@@ -23,7 +23,6 @@ import { NatureDetailsPage } from './natureDetailsPage';
 import { NaturePage } from './naturePage';
 import { OptionsPage } from './optionsPage';
 import { RandomGenerationPage } from './randomGenerationPage';
-import { SheetPage } from './sheetPage';
 import { SpellsPage } from './spellsPage';
 import { StoryDetailsPage } from './storyDetailsPage';
 import { StoryPage } from './storyPage';
@@ -62,7 +61,6 @@ export enum PageIdentity {
   ExiledBackground,
   ExiledBackgroundDetails,
   Finish,
-  Sheet,
 
   Tools,
   RandomGeneration,
@@ -104,7 +102,6 @@ export class PageFactory {
     this.factories[PageIdentity.WeedOfSorcery] = () => <WeedOfSorceryPage />;
     this.factories[PageIdentity.Spells] = () => <SpellsPage />;
     this.factories[PageIdentity.Finish] = () => <FinishPage />;
-    this.factories[PageIdentity.Sheet] = () => <SheetPage />;
     this.factories[PageIdentity.RandomGeneration] = () => <RandomGenerationPage />;
     this.factories[PageIdentity.TalentsOverview] = () => <TalentsOverviewPage />;
     this.factories[PageIdentity.ExportTest] = () => <ExportTestPage />;
