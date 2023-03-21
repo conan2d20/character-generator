@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/conan2d20/character-generator/master/.github/logo.png">
+</div>
+
 # Conan 2d20 Character Generator
 
 This project is based on the character generator created by [azjerei](https://github.com/azjerei)
