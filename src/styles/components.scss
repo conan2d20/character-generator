@@ -139,14 +139,24 @@ input[type='submit'] {
   bottom: 20px;
   background-color: #323232;
   color: white;
-  border-radius: 20px 4px 4px 20px;
   height: 40px;
   z-index: 100;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  border-radius: 20px;
 
   animation: page-fade-in ease 0.7s;
   -moz-animation: page-fade-in ease 0.7s;
   -webkit-animation: page-fade-in ease 0.7s;
   -o-animation: page-fade-in ease 0.7s;
+
+  @media (min-width: 800px) {
+    left: 20px;
+    bottom: 20px;
+    border-radius: 20px 4px 4px 20px;
+    transform: none;
+  }
 }
 
 .page-footer-icon-container {
@@ -314,5 +324,18 @@ input[type='submit'] {
   100% {
     opacity: 0;
     transform: translateY(20px);
+  }
+}
+
+#copyright {
+  text-align: center;
+  pointer-events: none;
+  font-size: 14px;
+  margin-top: 15px;
+  padding: 5px 15px;
+  color: #222;
+
+  @media (min-width: 800px) {
+    font-size: 16px;
   }
 }

@@ -4,8 +4,7 @@ import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
 import { CheckBox } from '../components/checkBox';
-import { PageHeader } from '../components/pageHeader';
-import { Skill } from '../helpers/skills';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { SpellsHelper } from '../helpers/spells';
 import { TalentsHelper } from '../helpers/talents';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -237,6 +236,7 @@ export class SpellsPage extends React.Component<IPageProperties, {}> {
           </tbody>
         </table>
         {necro}
+        <CopyrightDisclaimer />
         <Button text="FINISH" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

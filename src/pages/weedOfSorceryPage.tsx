@@ -3,8 +3,7 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
-import { CheckBox } from '../components/checkBox';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { TalentList } from '../components/talentList';
 import { Skill } from '../helpers/skills';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -66,6 +65,7 @@ export class WeedOfSorceryPage extends React.Component<IPageProperties, {}> {
           </div>
           <Button text="FINISH" className="button" onClick={() => this.onNext(true)} />
         </div>
+        <CopyrightDisclaimer />
       </div>
     );
   }

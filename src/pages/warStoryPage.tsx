@@ -3,7 +3,7 @@ import { character, CreationMode } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { WarStorySelection } from '../components/warStorySelection';
 import { Source } from '../helpers/sources';
 import { WarStoriesHelper, WarStoryModel } from '../helpers/warStories';
@@ -190,6 +190,7 @@ export class WarStoryPage extends React.Component<IPageProperties, IWarStoryPage
           {king}
           {adventurer}
           {kull}
+          <CopyrightDisclaimer />
         </div>
       );
     } else {
@@ -245,7 +246,12 @@ export class WarStoryPage extends React.Component<IPageProperties, IWarStoryPage
         </div>
       );
 
-      return <div className="page">{content}</div>;
+      return (
+        <div className="page">
+          {content}
+          <CopyrightDisclaimer />
+        </div>
+      );
     }
   }
 

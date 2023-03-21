@@ -3,6 +3,7 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { DropDownInput } from '../components/dropDownInput';
 import { EquipmentHelper } from '../helpers/equipment';
 import { HomeLand } from '../helpers/homelands';
@@ -83,6 +84,7 @@ export class EquipmentPage extends React.Component<IPageProperties, {}> {
           />
           <Button text="Random" className="button-small" onClick={() => this.randomWeapon()} />
         </div>
+        <CopyrightDisclaimer />
         {next}
       </div>
     );

@@ -1,9 +1,5 @@
 ﻿import * as React from 'react';
-import { character } from '../common/character';
-import { CharacterSerializer } from '../common/characterSerializer';
 import { SetHeaderText } from '../common/extensions';
-import { ArchetypesHelper } from '../helpers/archetypes';
-import { EquipmentHelper } from '../helpers/equipment';
 import { IPageProperties } from './pageFactory';
 
 export class EquipmentTestPage extends React.Component<IPageProperties, {}> {

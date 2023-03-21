@@ -11,3 +11,7 @@ This work is licensed under a
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+
+---
+
+**©2023 Conan Properties International LLC.** CONAN® and related logos, characters, names, and distinctive likenesses thereof are trademarks of Conan Properties International LLC unless otherwise noted. All Rights Reserved.

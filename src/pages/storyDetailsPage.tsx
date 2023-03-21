@@ -2,7 +2,7 @@
 import { character } from '../common/character';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { StoriesHelper } from '../helpers/stories';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
@@ -26,6 +26,7 @@ export class StoryDetailsPage extends React.Component<IPageProperties, {}> {
             <b>Trait:</b> {story.trait}
           </div>
         </div>
+        <CopyrightDisclaimer />
         <Button text="ARCHETYPE" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

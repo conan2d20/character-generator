@@ -4,7 +4,7 @@ import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { ArchetypeSelection } from '../components/archetypeSelection';
 import { Button } from '../components/button';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Archetype, ArchetypesHelper } from '../helpers/archetypes';
 import { Source } from '../helpers/sources';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -69,7 +69,12 @@ export class ArchetypePage extends React.Component<IPageProperties, IArchetypePa
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollArchetype() {

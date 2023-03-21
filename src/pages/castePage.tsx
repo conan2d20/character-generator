@@ -4,7 +4,7 @@ import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
 import { CasteSelection } from '../components/casteSelection';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Caste, CastesHelper } from '../helpers/castes';
 import { Source } from '../helpers/sources';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -61,7 +61,12 @@ export class CastePage extends React.Component<IPageProperties, ICastePageState>
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollCaste(source: Source) {

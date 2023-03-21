@@ -1,10 +1,9 @@
 ﻿import * as React from 'react';
 import { character } from '../common/character';
-import { CopyObject } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Dialog } from '../components/dialog';
-import { PageHeader } from '../components/pageHeader';
 import { RadioButton } from '../components/radioButton';
 import { Attribute, AttributesHelper } from '../helpers/attributes';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -240,6 +239,7 @@ export class AttributeAspectDetailsPage extends React.Component<IPageProperties,
             <tbody>{optional}</tbody>
           </table>
         </div>
+        <CopyrightDisclaimer />
         <Button text="CASTE" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

@@ -3,8 +3,8 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { HomelandSelection } from '../components/homelandSelection';
-import { PageHeader } from '../components/pageHeader';
 import { HomeLand, HomelandsHelper } from '../helpers/homelands';
 import { Source } from '../helpers/sources';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -76,7 +76,12 @@ export class HomelandPage extends React.Component<IPageProperties, IHomelandPage
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollHomeland() {

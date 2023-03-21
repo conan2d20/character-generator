@@ -4,7 +4,7 @@ import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { AttributeAspectsSelection } from '../components/attributeAspectsSelection';
 import { Button } from '../components/button';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { AttributeAspect, AttributesHelper } from '../helpers/attributes';
 import { Source } from '../helpers/sources';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -56,7 +56,12 @@ export class AttributeAspectsPage extends React.Component<IPageProperties, IAttr
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollAspects(source: Source) {

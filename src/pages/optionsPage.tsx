@@ -4,7 +4,7 @@ import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
 import { CheckBox } from '../components/checkBox';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { PDFNotice } from '../components/PDFNotice';
 import { CreationModesHelper } from '../helpers/creationModes';
 import { Source, SourcesHelper } from '../helpers/sources';
@@ -90,6 +90,7 @@ export class OptionsPage extends React.Component<IPageProperties, {}> {
         <table className="selection-list">
           <tbody>{modes}</tbody>
         </table>
+        <CopyrightDisclaimer />
       </div>
     );
   }

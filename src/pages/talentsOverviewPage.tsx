@@ -1,6 +1,7 @@
 ﻿import React = require('react');
 import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { DropDownInput } from '../components/dropDownInput';
 import { CastesHelper } from '../helpers/castes';
 import { HomelandsHelper } from '../helpers/homelands';
@@ -71,6 +72,7 @@ export class TalentsOverviewPage extends React.Component<{}, {}> {
           <table className="selection-list">
             <tbody>{talents}</tbody>
           </table>
+          <CopyrightDisclaimer />
         </div>
       </div>
     );

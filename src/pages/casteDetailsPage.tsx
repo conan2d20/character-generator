@@ -2,8 +2,8 @@
 import { character } from '../common/character';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { ElectiveSkillList } from '../components/electiveSkillList';
-import { PageHeader } from '../components/pageHeader';
 import { SkillView } from '../components/skill';
 import { TalentDescription } from '../components/talentDescription';
 import { Caste, CastesHelper } from '../helpers/castes';
@@ -48,6 +48,7 @@ export class CasteDetailsPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">SKILL</div>
           <div>{skill}</div>
         </div>
+        <CopyrightDisclaimer />
         <Button text="STORY" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

@@ -2,8 +2,7 @@
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
-import { CheckBox } from '../components/checkBox';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
 enum Tool {
@@ -38,6 +37,7 @@ export class ToolSelectionPage extends React.Component<IPageProperties, {}> {
             }}
           />
         </div>
+        <CopyrightDisclaimer />
       </div>
     );
   }

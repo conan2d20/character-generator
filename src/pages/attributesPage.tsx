@@ -1,11 +1,9 @@
 ﻿import * as React from 'react';
-import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { AttributeImprovementCollection, AttributeImprovementCollectionMode } from '../components/attributeImprovement';
 import { Button } from '../components/button';
-import { PageHeader } from '../components/pageHeader';
-import { Attribute, AttributesHelper } from '../helpers/attributes';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
 export class AttributesPage extends React.Component<IPageProperties, {}> {
@@ -26,6 +24,7 @@ export class AttributesPage extends React.Component<IPageProperties, {}> {
         <div className="panel">
           <AttributeImprovementCollection mode={AttributeImprovementCollectionMode.Conan} points={0} />
         </div>
+        <CopyrightDisclaimer />
         <Button text="ASPECTS" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

@@ -3,12 +3,9 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
-import { EducationSelection } from '../components/educationSelection';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { ExiledBackgroundSelection } from '../components/exiledBackgroundSelection';
-import { PageHeader } from '../components/pageHeader';
-import { Education, EducationsHelper } from '../helpers/educations';
 import { ExiledBackground, ExiledBackgroundHelper } from '../helpers/exiledBackgrounds';
-import { Source } from '../helpers/sources';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
 interface IExiledBackgroundPageState {
@@ -51,7 +48,12 @@ export class ExiledBackgroundPage extends React.Component<IPageProperties, IExil
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollBackground() {

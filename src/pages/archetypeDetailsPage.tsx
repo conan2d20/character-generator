@@ -2,16 +2,16 @@
 import { character } from '../common/character';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Dialog } from '../components/dialog';
 import { ElectiveSkillList } from '../components/electiveSkillList';
 import { EquipmentList } from '../components/equipmentList';
-import { PageHeader } from '../components/pageHeader';
 import { SkillView } from '../components/skill';
 import { TalentDescription } from '../components/talentDescription';
 import { TalentSelection } from '../components/talentSelection';
 import { Archetype, ArchetypesHelper } from '../helpers/archetypes';
 import { EquipmentHelper } from '../helpers/equipment';
-import { Skill, SkillsHelper } from '../helpers/skills';
+import { Skill } from '../helpers/skills';
 import { TalentsHelper } from '../helpers/talents';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
@@ -121,6 +121,7 @@ export class ArchetypeDetailsPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">EQUIPMENT</div>
           <EquipmentList equipment={equipment} onSelected={(eq, index) => this.onEquipmentSelected(eq, index)} />
         </div>
+        <CopyrightDisclaimer />
         <Button text="NATURE" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

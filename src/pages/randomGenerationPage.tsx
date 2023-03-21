@@ -3,14 +3,14 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { DieRoll } from '../components/dieRoll';
-import { PageHeader } from '../components/pageHeader';
-import { Archetype, ArchetypesHelper } from '../helpers/archetypes';
-import { AttributeAspect, AttributesHelper } from '../helpers/attributes';
-import { Caste, CastesHelper } from '../helpers/castes';
-import { Education, EducationsHelper } from '../helpers/educations';
-import { HomeLand, HomelandsHelper } from '../helpers/homelands';
-import { Nature, NaturesHelper } from '../helpers/natures';
+import { ArchetypesHelper } from '../helpers/archetypes';
+import { AttributesHelper } from '../helpers/attributes';
+import { CastesHelper } from '../helpers/castes';
+import { EducationsHelper } from '../helpers/educations';
+import { HomelandsHelper } from '../helpers/homelands';
+import { NaturesHelper } from '../helpers/natures';
 import { Source } from '../helpers/sources';
 import { StoriesHelper } from '../helpers/stories';
 import { WarStoriesHelper } from '../helpers/warStories';
@@ -210,6 +210,7 @@ export class RandomGenerationPage extends React.Component<IPageProperties, {}> {
         </table>
         <br />
         <br />
+        <CopyrightDisclaimer />
         <Button text="OK" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

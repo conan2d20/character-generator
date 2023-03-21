@@ -3,16 +3,14 @@ import { character } from '../common/character';
 import { Navigation } from '../common/navigator';
 import { AttributeView } from '../components/attribute';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Dialog } from '../components/dialog';
 import { ElectiveSkillList } from '../components/electiveSkillList';
-import { PageHeader } from '../components/pageHeader';
 import { SkillView } from '../components/skill';
 import { TalentList } from '../components/talentList';
 import { AttributesHelper } from '../helpers/attributes';
-import { EducationsHelper } from '../helpers/educations';
-import { Nature, NaturesHelper } from '../helpers/natures';
-import { Skill, SkillsHelper } from '../helpers/skills';
-import { TalentsHelper } from '../helpers/talents';
+import { NaturesHelper } from '../helpers/natures';
+import { Skill } from '../helpers/skills';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
 export class NatureDetailsPage extends React.Component<IPageProperties, {}> {
@@ -63,6 +61,7 @@ export class NatureDetailsPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">TALENT</div>
           <TalentList skills={talentSkills} onSelection={(talent) => this.onTalentSelected(talent)} />
         </div>
+        <CopyrightDisclaimer />
         <Button text="EDUCATION" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

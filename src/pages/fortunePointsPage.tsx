@@ -3,9 +3,8 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { FortunePointList } from '../components/fortunePointList';
-import { PageHeader } from '../components/pageHeader';
-import { Skill } from '../helpers/skills';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
 export class FortunePointsPage extends React.Component<IPageProperties, {}> {
@@ -31,6 +30,7 @@ export class FortunePointsPage extends React.Component<IPageProperties, {}> {
           <div>Improve one attribute by +1 or one skill by +2 Expertise/Focus.</div>
           <FortunePointList onSelection={(val) => this.onSelection(val)} />
         </div>
+        <CopyrightDisclaimer />
         <Button text="NEXT" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

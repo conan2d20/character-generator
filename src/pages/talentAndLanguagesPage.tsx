@@ -3,10 +3,10 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Dialog } from '../components/dialog';
 import { DropDownInput } from '../components/dropDownInput';
 import { LanguageList } from '../components/languageList';
-import { PageHeader } from '../components/pageHeader';
 import { TalentDescription } from '../components/talentDescription';
 import { TalentSelection } from '../components/talentSelection';
 import { Skill, SkillsHelper } from '../helpers/skills';
@@ -95,6 +95,7 @@ export class TalentAndLanguagesPage extends React.Component<IPageProperties, {}>
           </div>
           <LanguageList onSelection={(langs) => this.onLanguageSelected(langs)} points={this._numLanguages} />
         </div>
+        <CopyrightDisclaimer />
         <Button text="NEXT" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

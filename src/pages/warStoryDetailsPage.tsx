@@ -2,7 +2,7 @@
 import { character } from '../common/character';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { SkillView } from '../components/skill';
 import { WarStoriesHelper } from '../helpers/warStories';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -27,6 +27,7 @@ export class WarStoryDetailsPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">SKILL IMPROVEMENTS</div>
           {skills}
         </div>
+        <CopyrightDisclaimer />
         <Button text="CUSTOMIZATION" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

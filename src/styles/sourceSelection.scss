@@ -58,6 +58,26 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  left: 0;
   padding: 5px;
   color: white;
+  text-align: center;
+  user-select: none;
+  font-size: 14px;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+
+  animation: page-fade-in ease 0.7s;
+  -moz-animation: page-fade-in ease 0.7s;
+  -webkit-animation: page-fade-in ease 0.7s;
+  -o-animation: page-fade-in ease 0.7s;
+
+  @media (min-width: 800px) {
+    text-align: right;
+    font-size: 16px;
+    right: 20px;
+    bottom: 10px;
+    z-index: 3;
+  }
 }

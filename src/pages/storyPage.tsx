@@ -3,7 +3,7 @@ import { character, CreationMode } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { StorySelection } from '../components/storySelection';
 import { Source } from '../helpers/sources';
 import { StoriesHelper } from '../helpers/stories';
@@ -67,7 +67,12 @@ export class StoryPage extends React.Component<IPageProperties, IStoryPageState>
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollStory() {

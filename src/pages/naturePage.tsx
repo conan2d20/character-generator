@@ -3,8 +3,8 @@ import { character, CreationMode } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { NatureSelection } from '../components/natureSelection';
-import { PageHeader } from '../components/pageHeader';
 import { Nature, NaturesHelper } from '../helpers/natures';
 import { Source } from '../helpers/sources';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -60,7 +60,12 @@ export class NaturePage extends React.Component<IPageProperties, INaturePageStat
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollNature(source: Source) {

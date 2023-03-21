@@ -2,14 +2,12 @@
 import { character, Gender } from '../common/character';
 import { CharacterSerializer } from '../common/characterSerializer';
 import { SetHeaderText } from '../common/extensions';
-import { Navigation } from '../common/navigator';
-import { Button } from '../components/button';
 import { CharacterSheet } from '../components/characterSheet';
-import { PageHeader } from '../components/pageHeader';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { PDFNotice } from '../components/PDFNotice';
 import { RadioButton } from '../components/radioButton';
 import { HomelandsHelper } from '../helpers/homelands';
-import { IPageProperties, PageIdentity } from './pageFactory';
+import { IPageProperties } from './pageFactory';
 
 export class FinishPage extends React.Component<IPageProperties, {}> {
   private name: HTMLInputElement;
@@ -156,6 +154,7 @@ export class FinishPage extends React.Component<IPageProperties, {}> {
         <div className="panel">
           <CharacterSheet isVisible={true} />
         </div>
+        <CopyrightDisclaimer />
       </div>
     );
   }

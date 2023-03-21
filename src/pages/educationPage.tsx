@@ -3,8 +3,8 @@ import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { EducationSelection } from '../components/educationSelection';
-import { PageHeader } from '../components/pageHeader';
 import { Education, EducationsHelper } from '../helpers/educations';
 import { Source } from '../helpers/sources';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -72,7 +72,12 @@ export class EducationPage extends React.Component<IPageProperties, IEducationPa
       </div>
     );
 
-    return <div className="page">{content}</div>;
+    return (
+      <div className="page">
+        {content}
+        <CopyrightDisclaimer />
+      </div>
+    );
   }
 
   private rollEducation(magnitude: number) {

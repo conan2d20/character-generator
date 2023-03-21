@@ -1,12 +1,11 @@
 ﻿import * as React from 'react';
-import { character } from '../common/character';
 import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { AttributeImprovementCollection, AttributeImprovementCollectionMode } from '../components/attributeImprovement';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Dialog } from '../components/dialog';
 import { LegendarySkills } from '../components/legendarySkills';
-import { PageHeader } from '../components/pageHeader';
 import { Skill, SkillsHelper } from '../helpers/skills';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
@@ -46,6 +45,7 @@ export class AttributesAndSkillsPage extends React.Component<IPageProperties, {}
             onLegendarySelected={(skills) => this.onLegendarySelected(skills)}
           />
         </div>
+        <CopyrightDisclaimer />
         <Button text="NEXT" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

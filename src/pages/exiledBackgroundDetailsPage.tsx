@@ -2,20 +2,14 @@
 import { character } from '../common/character';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Dialog } from '../components/dialog';
-import { ElectiveSkillList } from '../components/electiveSkillList';
 import { EquipmentList } from '../components/equipmentList';
-import { PageHeader } from '../components/pageHeader';
 import { RadioButton } from '../components/radioButton';
 import { SkillView } from '../components/skill';
 import { TalentList } from '../components/talentList';
-import { TalentSelection } from '../components/talentSelection';
 import { Attribute } from '../helpers/attributes';
-import { Education, EducationsHelper } from '../helpers/educations';
 import { ExiledBackgroundHelper } from '../helpers/exiledBackgrounds';
-import { Skill, SkillsHelper } from '../helpers/skills';
-import { Source } from '../helpers/sources';
-import { TalentsHelper } from '../helpers/talents';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
 export class ExiledBackgroundDetailsPage extends React.Component<IPageProperties, {}> {
@@ -84,6 +78,7 @@ export class ExiledBackgroundDetailsPage extends React.Component<IPageProperties
           <div className="header-small">MEMENTO</div>
           <EquipmentList equipment={[bg.memento]} onSelected={() => {}} />
         </div>
+        <CopyrightDisclaimer />
         <Button text="NOTABLE EVENT" className="button-next" onClick={() => this.onNext()} />
       </div>
     );

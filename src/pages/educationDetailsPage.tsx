@@ -2,17 +2,16 @@
 import { character } from '../common/character';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { Dialog } from '../components/dialog';
 import { ElectiveSkillList } from '../components/electiveSkillList';
 import { EquipmentList } from '../components/equipmentList';
-import { PageHeader } from '../components/pageHeader';
 import { SkillView } from '../components/skill';
 import { TalentList } from '../components/talentList';
 import { TalentSelection } from '../components/talentSelection';
-import { Education, EducationsHelper } from '../helpers/educations';
-import { Skill, SkillsHelper } from '../helpers/skills';
+import { EducationsHelper } from '../helpers/educations';
+import { Skill } from '../helpers/skills';
 import { Source } from '../helpers/sources';
-import { TalentsHelper } from '../helpers/talents';
 import { IPageProperties, PageIdentity } from './pageFactory';
 
 export class EducationDetailsPage extends React.Component<IPageProperties, {}> {
@@ -87,6 +86,7 @@ export class EducationDetailsPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">EQUIPMENT</div>
           <EquipmentList equipment={character.educationEquipment} onSelected={(eq) => this.onEquipmentSelected(eq)} />
         </div>
+        <CopyrightDisclaimer />
         <Button text={buttonLabel} className="button-next" onClick={() => this.onNext()} />
       </div>
     );

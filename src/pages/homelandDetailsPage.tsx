@@ -1,12 +1,10 @@
 ﻿import * as React from 'react';
 import { character } from '../common/character';
-import { SetHeaderText } from '../common/extensions';
 import { Navigation } from '../common/navigator';
 import { Button } from '../components/button';
+import { CopyrightDisclaimer } from '../components/CopyrightDisclaimer';
 import { DropDownInput } from '../components/dropDownInput';
-import { PageHeader } from '../components/pageHeader';
 import { TalentDescription } from '../components/talentDescription';
-import { TalentList } from '../components/talentList';
 import { TalentSelection } from '../components/talentSelection';
 import { HomeLand, HomelandsHelper } from '../helpers/homelands';
 import { IPageProperties, PageIdentity } from './pageFactory';
@@ -91,6 +89,7 @@ export class HomelandDetailsPage extends React.Component<IPageProperties, {}> {
           <div className="header-small">LANGUAGE OPTIONS</div>
           <div>{languageContent}</div>
         </div>
+        <CopyrightDisclaimer />
         <Button text="ATTRIBUTES" className="button-next" onClick={() => this.onNext()} />
       </div>
     );
